@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Learning Path - Tahsin Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+
+  <style>
+    .assessment-box {
+      position: relative;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2.5rem;
+      background: #faf6e9;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .islamic-border {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(45deg, #2e7d32 0px, #2e7d32 30px, #faf6e9 30px, #faf6e9 60px);
+      opacity: 0.1;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .title {
+      color: #2e7d32;
+      font-family: "Poppins", sans-serif;
+      font-size: 2.2em;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .title i {
+      margin: 0 15px;
+      color: #c19a6b;
+    }
+
+    .subtitle {
+      font-style: italic;
+      color: #6d4c41;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 0.9em;
+    }
+
+    .luxury-btn {
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      padding: 18px 30px;
+      font-size: 1.2em;
+      background: linear-gradient(45deg, #2e7d32, #1b5e20);
+      color: #fff3e0;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .luxury-btn i {
+      margin-left: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .luxury-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+    }
+
+    .luxury-btn:hover i {
+      transform: translateX(5px);
+    }
+
+    .luxury-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Tambahkan pattern islami */
+    .assessment-box::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(30deg, transparent 0, transparent 5px, rgba(193, 154, 107, 0.1) 5px, rgba(193, 154, 107, 0.1) 10px);
+      transform: rotate(15deg);
+      pointer-events: none;
+    }
+  </style>
+
+  <!-- Font Awesome & Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <span class="text-2xl font-bold text-emerald-600">Tahsin.<span class="text-gray-600">Online</span></span>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="tahsin.html" class="text-gray-600 hover:text-emerald-600">Beranda</a>
+            <a href="#fitur" class="text-gray-600 hover:text-emerald-600">Fitur</a>
+            <a href="#tentang" class="text-gray-600 hover:text-emerald-600">Tentang</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-4xl mx-auto">
+          <div class="w-32 h-32 bg-emerald-50 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <i class="fas fa-brain text-emerald-600 text-5xl"></i>
+          </div>
+          <h1 class="text-4xl font-bold text-gray-800 mb-4">AI Learning Path</h1>
+          <p class="text-xl text-gray-600 mb-8">Kurikulum cerdas yang disesuaikan dengan kemampuan personal Anda dalam mempelajari tajwid dan tahsin Al-Quran</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fitur Utama -->
+    <section class="py-20 bg-gray-50" id="fitur">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-emerald-50 rounded-full mb-6 flex items-center justify-center">
+              <i class="fas fa-chart-line text-emerald-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Analisis Adaptif</h3>
+            <p class="text-gray-600">Sistem AI kami menganalisis kemampuan bacaan Anda secara mendalam, mengidentifikasi kekuatan dan area pengembangan spesifik.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-emerald-50 rounded-full mb-6 flex items-center justify-center">
+              <i class="fas fa-route text-emerald-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Rute Belajar Personal</h3>
+            <p class="text-gray-600">Kurikulum dinamis yang beradaptasi dengan progres Anda, memberikan materi dan tantangan yang tepat sesuai level.</p>
+          </div>
+
+          <div class="bg-white p-8 rounded-2xl shadow-md">
+            <div class="w-16 h-16 bg-emerald-50 rounded-full mb-6 flex items-center justify-center">
+              <i class="fas fa-book-reader text-emerald-600 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Tracking Progres</h3>
+            <p class="text-gray-600">Pantau kemajuan Anda dengan dashboard komprehensif yang memberikan wawasan mendalam tentang perjalanan belajar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proses Kerja -->
+    <section class="py-20 bg-white" id="tentang">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Bagaimana AI Learning Path Bekerja</h2>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-24 h-24 bg-emerald-50 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <span class="text-3xl font-bold text-emerald-600">1</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Asesmen Awal</h3>
+            <p class="text-gray-600">Tes komprehensif untuk mengukur kemampuan bacaan Anda</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-24 h-24 bg-emerald-50 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <span class="text-3xl font-bold text-emerald-600">2</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Analisis AI</h3>
+            <p class="text-gray-600">Sistem cerdas menganalisis hasil dan merancang rute belajar</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-24 h-24 bg-emerald-50 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <span class="text-3xl font-bold text-emerald-600">3</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Materi Personal</h3>
+            <p class="text-gray-600">Materi dan latihan disesuaikan dengan kebutuhan individual</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-24 h-24 bg-emerald-50 rounded-full mx-auto mb-6 flex items-center justify-center">
+              <span class="text-3xl font-bold text-emerald-600">4</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Evaluasi Berkelanjutan</h3>
+            <p class="text-gray-600">Pemantauan progres dan penyesuaian materi secara berkala</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- quiz Ai -->
+    <div class="assessment-box">
+      <div class="islamic-border"></div>
+      <div class="content">
+        <h1 class="title">
+          <i class="fas fa-mosque"></i>
+          Asesmen Genpita
+          <i class="fas fa-book-quran"></i>
+        </h1>
+        <p class="subtitle">"Dan katakanlah: Bekerjalah kamu, maka Allah akan melihat pekerjaanmu..." (QS. At-Taubah: 105)</p>
+        <button class="luxury-btn" onclick="window.location.href='quizAitahsin.html'">
+          Mulai Asesmen Sekarang
+          <i class="fas fa-hand-point-right"></i>
+        </button>
+      </div>
+    </div>
+    <!-- end -->
+
+    <!-- CTA Section -->
+    <section class="bg-emerald-600 text-white py-20">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Mulai Perjalanan Belajar Anda</h2>
+        <p class="text-xl mb-8">Bergabunglah dengan AI Learning Path dan temukan potensi sejati Anda dalam membaca Al-Quran</p>
+        <a href="#" class="bg-white text-emerald-600 px-12 py-4 rounded-full text-lg font-semibold hover:bg-gray-100">Mulai Asesmen Gratis</a>
+      </div>
+    </section>
+  </body>
+</html>

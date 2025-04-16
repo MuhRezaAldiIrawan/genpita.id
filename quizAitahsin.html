@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis Tahsin Genpita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --primary-color: #2d5f2e;
+        --accent-color: #d4af37;
+        --danger-color: #dc3545;
+        --text-color: #333;
+        --bg-color: #f8f8f8;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(135deg, rgba(242, 242, 242, 0.9), rgba(248, 248, 248, 0.9)),
+          url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y4ZjhmOCI+PC9yZWN0PjxwYXRoIGQ9Ik0yMCAyMGw4MCA4ME0xMDAgMjBsLTgwIDgwTTIwIDEwMGw4MC04ME0xMDAgMTAwbC04MC04MCIgc3Ryb2tlPSIjZTRlNGU0IiBzdHJva2Utd2lkdGg9IjIiPjwvcGF0aD48L3N2Zz4=");
+        min-height: 100vh;
+        color: var(--text-color);
+      }
+
+      .assessment-link {
+        text-align: center;
+        padding: 4rem 2rem;
+      }
+
+      .quiz-container {
+        max-width: 800px;
+        margin: 2rem auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .quiz-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      }
+
+      h2 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+        text-align: center;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: var(--accent-color);
+      }
+
+      .btn {
+        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 5px 15px rgba(45, 95, 46, 0.3);
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(45, 95, 46, 0.4);
+      }
+
+      .question {
+        font-size: 1.1rem;
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: #f8f8f8;
+        border-radius: 10px;
+        text-align: left;
+        position: relative;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      input[type="radio"] {
+        accent-color: var(--primary-color);
+        transform: scale(1.2);
+        margin: 0 10px 0 5px;
+      }
+
+      button {
+        background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        padding: 1rem 3rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        margin-top: 1.5rem;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(45, 95, 46, 0.3);
+      }
+
+      .button-group {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+      }
+
+      .exit-btn {
+        background: linear-gradient(45deg, var(--danger-color), #c82333);
+        color: white;
+        padding: 0.8rem 2rem;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .exit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+      }
+
+      .result {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+        background: #e8f5e9;
+        border-radius: 10px;
+        margin-top: 2rem;
+        animation: fadeIn 0.5s ease;
+        text-align: center;
+      }
+
+      .motivation-box {
+        padding: 2rem;
+        background: #f8f8f8;
+        border-radius: 15px;
+        margin-top: 2rem;
+        text-align: center;
+        border-left: 5px solid var(--primary-color);
+        animation: fadeIn 0.5s ease;
+      }
+
+      .motivation-text {
+        font-size: 1.2rem;
+        color: var(--primary-color);
+        font-style: italic;
+        margin-bottom: 0.5rem;
+      }
+
+      .motivation-verse {
+        font-size: 0.9rem;
+        color: #666;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .quiz-container {
+          margin: 1rem;
+          padding: 2rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="assessment-link">
+      <h2>Selamat Datang di Genpita</h2>
+      <p>Silakan ikuti asesmen tahsin untuk menguji pemahaman Anda.</p>
+      <a href="#quiz" class="btn">Mulai Asesmen</a>
+    </div>
+
+    <div class="quiz-container" id="quiz">
+      <h2>Kuis Tahsin</h2>
+      <form id="quiz-form">
+        <div id="questions"></div>
+        <div class="button-group">
+          <button type="submit">Kirim Jawaban</button>
+          <button type="button" class="exit-btn" onclick="exitQuiz()">Keluar</button>
+        </div>
+      </form>
+      <div class="result" id="result"></div>
+      <div class="motivation-box" id="motivation" style="display: none">
+        <div class="motivation-text" id="motivation-text"></div>
+        <div class="motivation-verse" id="motivation-verse"></div>
+      </div>
+    </div>
+
+    <script>
+      const questions = [
+        { q: "Apa itu tahsin dalam membaca Al-Qur'an?", options: ["Memahami makna Al-Qur'an", "Memperbaiki bacaan Al-Qur'an", "Menghafal Al-Qur'an"], answer: 1 },
+        { q: "Apa hukum membaca Al-Qur'an dengan tajwid?", options: ["Sunnah", "Mubah", "Wajib"], answer: 2 },
+        { q: "Huruf hijaiyah berjumlah?", options: ["28", "29", "30"], answer: 1 },
+        { q: "Apa itu makhraj dalam ilmu tajwid?", options: ["Panjang pendek bacaan", "Tempat keluarnya huruf", "Cara membaca huruf"], answer: 1 },
+        { q: "Berapa hukum bacaan nun sukun dan tanwin?", options: ["3", "4", "5"], answer: 2 },
+        { q: "Izhar artinya?", options: ["Jelas", "Melebur", "Mendengung"], answer: 0 },
+        { q: "Idgham bighunnah terjadi jika bertemu huruf?", options: ["ي، ن، م، و", "ل، ر", "ق، ك"], answer: 0 },
+        { q: "Berapa macam mad dalam ilmu tajwid?", options: ["3", "5", "7"], answer: 1 },
+        { q: "Contoh bacaan qalqalah kubra adalah?", options: ["حق", "قطبجد", "دَاجَ"], answer: 1 },
+        { q: "Hukum bacaan dalam 'مَنْ يَقُولُ' adalah?", options: ["Idgham", "Ikhfa", "Izhar"], answer: 1 },
+        { q: "Hukum bacaan dalam 'يَنْصُرُ' adalah?", options: ["Idgham", "Ikhfa", "Izhar"], answer: 1 },
+        { q: "Hukum bacaan dalam 'عَنْكُمْ' adalah?", options: ["Ikhfa", "Idgham", "Izhar"], answer: 0 },
+        { q: "Hukum bacaan dalam 'مِنْ رَبِّهِمْ' adalah?", options: ["Ikhfa", "Idgham", "Izhar"], answer: 1 },
+        { q: "Mad wajib muttasil terjadi jika?", options: ["Mad bertemu hamzah dalam satu kata", "Mad bertemu sukun", "Mad bertemu huruf qalqalah"], answer: 0 },
+        { q: "Mad aridh lissukun terjadi jika?", options: ["Mad bertemu huruf sukun karena waqaf", "Mad bertemu hamzah", "Mad bertemu qalqalah"], answer: 0 },
+      ];
+
+      const quizForm = document.getElementById("quiz-form");
+      const questionsContainer = document.getElementById("questions");
+      const resultContainer = document.getElementById("result");
+
+      function loadQuestions() {
+        questions.forEach((q, index) => {
+          let questionHTML = `<div class="question">${index + 1}. ${q.q}</div>`;
+          q.options.forEach((option, i) => {
+            questionHTML += `<label><input type="radio" name="q${index}" value="${i}" required> ${option}</label><br>`;
+          });
+          questionsContainer.innerHTML += questionHTML + "<br>";
+        });
+      }
+
+      function exitQuiz() {
+        if (confirm("Apakah Anda yakin ingin keluar dari asesmen?")) {
+          window.location.href = "tahsin.html";
+          document.getElementById("quiz").scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      quizForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let score = 0;
+        questions.forEach((q, index) => {
+          const selectedAnswer = document.querySelector(`input[name="q${index}"]:checked`);
+          if (selectedAnswer && parseInt(selectedAnswer.value) === q.answer) {
+            score++;
+          }
+        });
+
+        const percentage = ((score / questions.length) * 100).toFixed(1);
+        const motivationData = getMotivation(percentage);
+
+        resultContainer.innerHTML = `Skor Anda: ${score}/${questions.length} (${percentage}%)`;
+        document.getElementById("motivation").style.display = "block";
+        document.getElementById("motivation-text").innerHTML = motivationData.text;
+        document.getElementById("motivation-verse").innerHTML = motivationData.verse;
+      });
+
+      function getMotivation(percentage) {
+        const motivations = [
+          {
+            min: 90,
+            text: "مَا شَاءَ ٱللَّٰهُ! Kerja bagus! Terus pertahankan semangat belajar Al-Qur'an!",
+            verse: "QS. Al-Mujadilah: 11 - '...Allah akan meninggikan orang-orang yang beriman di antaramu dan orang-orang yang diberi ilmu pengetahuan beberapa derajat.'",
+          },
+          {
+            min: 70,
+            text: "اَلْحَمْدُ لِلَّٰهِ! Hasil baik, terus tingkatkan pemahaman tajwidmu!",
+            verse: "QS. Al-Baqarah: 285 - '...Kami dengar dan kami taat. Ampunilah kami ya Tuhan kami dan kepada-Mu tempat kembali.'",
+          },
+          {
+            min: 50,
+            text: "لاَ تَيْأَسُوا! Jangan menyerah! Pelajari lagi dan coba kembali!",
+            verse: "QS. Az-Zumar: 53 - 'Katakanlah: Hai hamba-hamba-Ku yang melampaui batas terhadap diri mereka sendiri, janganlah kamu berputus asa dari rahmat Allah...'",
+          },
+          {
+            min: 0,
+            text: "اُطْلُبُوا الْعِلْمَ! Tetaplah semangat! Belajar adalah ibadah.",
+            verse: "QS. Al-Isra: 36 - 'Dan janganlah kamu mengikuti apa yang kamu tidak mempunyai pengetahuan tentangnya...'",
+          },
+        ];
+
+        return motivations.find((m) => percentage >= m.min);
+      }
+
+      loadQuestions();
+    </script>
+  </body>
+</html>

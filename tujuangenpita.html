@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Genpita - Generasi Pecinta Al-Quran</title>
+    <style>
+      /* Reset dan variabel */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      :root {
+        --primary: #14b8a6;
+        --secondary: #0f766e;
+        --dark: #1e293b;
+        --light: #f8fafc;
+        --accent: #f59e0b;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      /* Header styles */
+      header {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("gambar/WhatsApp\ Image\ 2024-11-28\ at\ 18.02.32.jpeg") center/cover no-repeat;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 0 20px;
+      }
+
+      nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+      }
+
+      .logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+      }
+
+      .logo span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+
+      .hero-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        font-weight: 800;
+      }
+
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        max-width: 700px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: var(--secondary);
+      }
+
+      /* Misi & Visi section */
+      .about-section {
+        padding: 6rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .section-title {
+        position: relative;
+        display: inline-block;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        padding-bottom: 1rem;
+        color: var(--dark);
+      }
+
+      .section-title::after {
+        content: "";
+        position: absolute;
+        width: 70px;
+        height: 3px;
+        background-color: var(--primary);
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .vision-mission {
+        display: flex;
+        gap: 2rem;
+        margin-top: 3rem;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1;
+        min-width: 300px;
+        max-width: 500px;
+        background-color: white;
+        padding: 2.5rem 2rem;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--secondary);
+        font-weight: 700;
+      }
+
+      .card-icon {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        color: var(--accent);
+      }
+
+      .card ul {
+        list-style-type: none;
+        text-align: left;
+        margin-top: 1.5rem;
+      }
+
+      .card li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 1.5rem;
+      }
+
+      .card li::before {
+        content: "•";
+        color: var(--primary);
+        font-size: 1.5rem;
+        position: absolute;
+        left: 0;
+        top: -5px;
+      }
+
+      /* Program section */
+      .programs {
+        background-color: var(--dark);
+        padding: 6rem 2rem;
+        color: white;
+        text-align: center;
+      }
+
+      .programs .section-title {
+        color: white;
+      }
+
+      .program-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .program-card {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+
+      .program-card:hover {
+        transform: translateY(-10px);
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .program-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+
+      .program-title {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s;
+      }
+
+      .social-icon:hover {
+        background-color: var(--primary);
+      }
+
+      .copyright {
+        margin-top: 2rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .hero-content h1 {
+          font-size: 2.5rem;
+        }
+
+        .nav-links {
+          display: none;
+        }
+
+        .card {
+          min-width: 100%;
+        }
+
+        .vision-mission {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav>
+        <a href="#" class="logo">Gen<span>pita</span></a>
+        <div class="nav-links">
+          <a href="inde.html">Beranda</a>
+          <a href="#about">Tentang</a>
+          <a href="#programs">Program</a>
+          <a href="#contact">Kontak</a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <h1>Generasi Pecinta Al-Quran</h1>
+        <p>Mencetak generasi muda yang cinta, memahami, dan mengamalkan Al-Quran dalam kehidupan sehari-hari</p>
+        <a href="#about" class="btn">Jelajahi Lebih Lanjut</a>
+      </div>
+    </header>
+
+    <!-- About Section (Misi & Visi) -->
+    <section class="about-section" id="about">
+      <h2 class="section-title">Tentang Genpita</h2>
+      <p>Ekstrakurikuler Generasi Pecinta Al-Quran (Genpita) adalah wadah bagi para siswa untuk memperdalam kecintaan terhadap Al-Quran melalui berbagai kegiatan yang menarik, interaktif, dan bermanfaat.</p>
+
+      <div class="vision-mission">
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3 class="card-title">Visi</h3>
+          <p>
+            menjadi wadah pembelajaran Al-Qur’an yang unggul, inspiratif, dan berkarakter, dengan menanamkan nilai-nilai tahsin, tahfiz, dan tilawah secara mendalam dan berkesinambungan. Kami berkomitmen untuk mencetak generasi yang tidak
+            hanya mampu membaca dan menghafal Al-Qur’an dengan baik dan benar, tetapi juga memahami, mengamalkan, serta menyebarkan ajaran Islam dengan penuh keikhlasan. Melalui bimbingan yang terstruktur dan berbasis nilai-nilai keislaman,
+            Genpita berupaya melahirkan individu yang berakhlak mulia, cerdas, serta memiliki semangat dakwah untuk kebaikan umat..
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon">🎯</div>
+          <h3 class="card-title">Misi</h3>
+          <ul>
+            <li>Memfasilitasi pembelajaran Al-Quran dengan metode yang menyenangkan dan inovatif.</li>
+            <li>Mengembangkan kemampuan membaca, menghafal, dan memahami makna Al-Quran.</li>
+            <li>Mengimplementasikan nilai-nilai Al-Quran dalam kehidupan sehari-hari.</li>
+            <li>Membangun karakter dan kepribadian yang islami melalui pemahaman Al-Quran.</li>
+            <li>Mencetak generasi yang mampu menjadi agen perubahan positif dalam masyarakat.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs" id="programs">
+      <h2 class="section-title">Program Unggulan</h2>
+      <p>Beragam aktivitas menarik untuk mendekatkan diri pada Al-Quran</p>
+
+      <div class="program-grid">
+        <div class="program-card">
+          <div class="program-icon">🎙️</div>
+          <h3 class="program-title">Tahsin Al-Quran</h3>
+          <p>Pelatihan membaca Al-Quran dengan tajwid dan makhraj yang benar.</p>
+        </div>
+
+        <div class="program-card">
+          <div class="program-icon">🧠</div>
+          <h3 class="program-title">Tahfidz Al-Quran</h3>
+          <p>Program menghafal Al-Quran dengan metode modern dan efektif.</p>
+        </div>
+
+        <div class="program-card">
+          <div class="program-icon">💡</div>
+          <h3 class="program-title">Tadabbur Al-Quran</h3>
+          <p>Mempelajari dan memahami makna serta tafsir Al-Quran.</p>
+        </div>
+
+        <div class="program-card">
+          <div class="program-icon">🏆</div>
+          <h3 class="program-title">Musabaqah Tilawatil Quran</h3>
+          <p>Persiapan dan pelatihan untuk kompetisi Al-Quran.</p>
+        </div>
+
+        <div class="program-card">
+          <div class="program-icon">🎨</div>
+          <h3 class="program-title">Kaligrafi Quran</h3>
+          <p>Belajar seni menulis indah ayat-ayat Al-Quran.</p>
+        </div>
+
+        <div class="program-card">
+          <div class="program-icon">🌐</div>
+          <h3 class="program-title">Dakwah Digital</h3>
+          <p>Menyebarkan nilai-nilai Al-Quran melalui media sosial dan platform digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <h2>Bergabunglah Dengan Kami</h2>
+      <p>Mari bersama-sama menjadi bagian dari Generasi Pecinta Al-Quran</p>
+
+      <div class="social-links">
+        <a href="#" class="social-icon">FB</a>
+        <a href="#" class="social-icon">IG</a>
+        <a href="#" class="social-icon">YT</a>
+        <a href="#" class="social-icon">WA</a>
+      </div>
+
+      <p class="contact-info">Email: genpita@example.com | Telp: 081234567890</p>
+      <p class="copyright">© 2025 Genpita - Generasi Pecinta Al-Quran. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

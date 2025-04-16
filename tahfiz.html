@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tahfiz Al-Quran: Panduan Lengkap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f6f9;
+      }
+      .hero-section {
+        background: linear-gradient(135deg, #2c3e50, #3498db);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      }
+      .info-card {
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .info-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+      .timeline-item {
+        border-left: 3px solid #3498db;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 10px;
+        padding-bottom: 30px;
+      }
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+      .timeline-item:before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: #3498db;
+        border-radius: 50%;
+        position: absolute;
+        left: -9px;
+        top: 0px;
+      }
+      .testimonial-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      }
+      .nav-link {
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #3498db;
+      }
+      @media (max-width: 768px) {
+        .hero-section {
+          clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+        }
+      }
+
+      /* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset dan Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Kontainer Utama */
+.contact-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Kartu Kontak */
+.contact-card {
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Judul */
+.contact-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.contact-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.contact-title p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+}
+
+/* Formulir */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Tombol Kirim */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: white;
+    color: #2563eb;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #f4f4f4;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ikon Kontak */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    gap: 1.5rem;
+}
+
+.contact-icon {
+    color: white;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.contact-icon:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 1rem;
+    }
+    
+    .contact-card {
+        padding: 1rem;
+    }
+    
+    .contact-title h2 {
+        font-size: 2rem;
+    }
+}
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar (Tambahan) -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <div class="flex space-x-4">
+            <!-- Logo -->
+            <div>
+              <a href="#" class="flex items-center py-4 px-2">
+                <span class="font-bold text-blue-800 text-lg">Tahfiz Al-Quran</span>
+              </a>
+            </div>
+            <!-- Primary Nav -->
+            <div class="hidden md:flex items-center space-x-1">
+              <a href="inde.html" class="py-4 px-3 text-gray-700 hover:text-blue-600 nav-link">Beranda</a>
+              <a href="#tentang" class="py-4 px-3 text-gray-700 hover:text-blue-600 nav-link">Tentang</a>
+              <a href="#manfaat" class="py-4 px-3 text-gray-700 hover:text-blue-600 nav-link">Manfaat</a>
+              <a href="#kegiatan" class="py-4 px-3 text-gray-700 hover:text-blue-600 nav-link">Kegiatan</a>
+              <a href="#testimoni" class="py-4 px-3 text-gray-700 hover:text-blue-600 nav-link">Testimoni</a>
+              <a href="#kontak" class="py-4 px-3 text-gray-700 hover:text-blue-600 nav-link">Kontak</a>
+            </div>
+          </div>
+          <!-- Mobile Button -->
+          <div class="md:hidden flex items-center">
+            <button class="mobile-menu-button">
+              <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <!-- Secondary Nav (Tambahan) -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="#daftar" class="py-2 px-5 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300">Daftar Sekarang</a>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div class="mobile-menu hidden md:hidden">
+        <a href="#" class="block py-2 px-4 text-sm hover:bg-blue-50">Beranda</a>
+        <a href="#tentang" class="block py-2 px-4 text-sm hover:bg-blue-50">Tentang</a>
+        <a href="#manfaat" class="block py-2 px-4 text-sm hover:bg-blue-50">Manfaat</a>
+        <a href="#kegiatan" class="block py-2 px-4 text-sm hover:bg-blue-50">Kegiatan</a>
+        <a href="#testimoni" class="block py-2 px-4 text-sm hover:bg-blue-50">Testimoni</a>
+        <a href="#kontak" class="block py-2 px-4 text-sm hover:bg-blue-50">Kontak</a>
+        <a href="#daftar" class="block py-2 px-4 text-sm bg-blue-600 text-white">Daftar Sekarang</a>
+      </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="hero-section text-white pt-28 pb-20 px-4" id="home">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 pr-0 md:pr-10 mb-8 md:mb-0 text-center md:text-left">
+          <h1 class="text-3xl md:text-4xl font-bold mb-6">Tahfiz Al-Quran</h1>
+          <p class="text-lg md:text-xl mb-8 opacity-90">Perjalanan spiritual menghafal kitab suci Al-Quran dengan metode sistematis dan komprehensif.</p>
+          <a href="#tentang" class="bg-white text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-blue-100 transition">Pelajari Lebih Lanjut</a>
+        </div>
+        <div class="md:w-1/2">
+          <img src="gambar/logo tahfiz.png" alt="Tahfiz Logo" class="rounded-xl shadow-2xl w-full" />
+        </div>
+      </div>
+    </header>
+
+    <!-- Definisi Tahfiz -->
+    <section class="bg-white py-16" id="tentang">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Apa Itu Tahfiz?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="info-card bg-gray-50 p-6 rounded-xl">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-book-quran"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4 text-center">Definisi</h3>
+            <p>Tahfiz adalah proses menghafal Al-Quran secara sistematis, mencakup hafalan, pemahaman tajwid, dan makna ayat.</p>
+          </div>
+          <div class="info-card bg-gray-50 p-6 rounded-xl">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4 text-center">Tujuan</h3>
+            <p>Menjaga kemurnian Al-Quran, mendekatkan diri kepada Allah, dan mengamalkan ajaran-Nya dalam kehidupan sehari-hari.</p>
+          </div>
+          <div class="info-card bg-gray-50 p-6 rounded-xl">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-road"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4 text-center">Metode</h3>
+            <p>Pembelajaran terstruktur dengan bimbingan ustadz, meliputi setoran hafalan, muraja'ah, dan evaluasi berkala.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metode Tahfiz (Tambahan) -->
+    <section class="py-16 bg-blue-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Metode Pembelajaran</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2 flex flex-col space-y-6">
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-blue-700">Tahsin</h3>
+              <p class="mt-2">Memperbaiki bacaan Al-Quran sesuai dengan kaidah tajwid yang benar.</p>
+            </div>
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-blue-700">Talaqqi</h3>
+              <p class="mt-2">Belajar langsung dari guru dengan metode mendengar dan mengulang.</p>
+            </div>
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-blue-700">Talqin</h3>
+              <p class="mt-2">Mendengarkan bacaan guru kemudian mengikutinya.</p>
+            </div>
+            <div class="timeline-item">
+              <h3 class="text-xl font-semibold text-blue-700">Muraja'ah</h3>
+              <p class="mt-2">Mengulang hafalan yang sudah disetorkan untuk menjaga kekuatan hafalan.</p>
+            </div>
+          </div>
+          <div class="md:w-1/2 bg-white rounded-xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-blue-700 mb-4">Jadwal Pembelajaran</h3>
+            <div class="space-y-4">
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">Sabtu</span>
+                <span>Setoran Hafalan Baru</span>
+              </div>
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">15:00-15:30</span>
+                <span>Muraja'ah: Hafalan</span>
+              </div>
+              <div class="flex justify-between border-b pb-2">
+                <span class="font-medium">15:30-16:40</span>
+                <span>menyetor hafalan ke guru pembina</span>
+              </div>
+              <div class="mt-6 bg-blue-100 p-4 rounded-lg">
+                <h4 class="font-semibold text-blue-800 mb-2">Target Mingguan</h4>
+                <p>Hafalan baru: 1 halaman/hari (5 halaman/minggu)</p>
+                <p>Muraja'ah: 5 halaman/hari (25 halaman/minggu)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manfaat Tahfiz -->
+    <section class="bg-gray-100 py-16" id="manfaat">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Manfaat Tahfiz</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="info-card bg-white p-6 rounded-xl text-center">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-pray"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4">Spiritual</h3>
+            <p>Meningkatkan kedekatan dengan Allah dan ketenangan hati dalam beribadah.</p>
+          </div>
+          <div class="info-card bg-white p-6 rounded-xl text-center">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4">Mental</h3>
+            <p>Mengembangkan disiplin, fokus, dan ketahanan mental dalam menghadapi tantangan.</p>
+          </div>
+          <div class="info-card bg-white p-6 rounded-xl text-center">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-cogs"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4">Kognitif</h3>
+            <p>Meningkatkan daya ingat dan kemampuan berpikir sistematis dalam belajar.</p>
+          </div>
+          <div class="info-card bg-white p-6 rounded-xl text-center">
+            <div class="text-blue-600 text-4xl mb-4 flex justify-center">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-700 mb-4">Emosional</h3>
+            <p>Memberikan ketenangan batin dan kemampuan mengendalikan emosi dengan lebih baik.</p>
+          </div>
+        </div>
+
+        <!-- Extended Benefits (Tambahan) -->
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div class="info-card bg-white p-6 rounded-xl">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-users text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-blue-700">Sosial</h3>
+            </div>
+            <p>Memperluas jaringan pertemanan dengan sesama penghafal Al-Quran dan meningkatkan status di masyarakat.</p>
+          </div>
+          <div class="info-card bg-white p-6 rounded-xl">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-user-graduate text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-blue-700">Akademik</h3>
+            </div>
+            <p>Membuka peluang beasiswa pendidikan dan meningkatkan performa dalam bidang akademis lainnya.</p>
+          </div>
+          <div class="info-card bg-white p-6 rounded-xl">
+            <div class="flex items-center mb-4">
+              <div class="bg-blue-100 p-3 rounded-full mr-4">
+                <i class="fas fa-briefcase text-blue-600"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-blue-700">Karir</h3>
+            </div>
+            <p>Menciptakan peluang karir di bidang pendidikan Al-Quran dan meningkatkan integritas dalam bekerja.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kegiatan Setoran (Original Cards Section) -->
+    <section class="py-16" id="kegiatan">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Kegiatan Setoran Hafalan</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="info-card bg-white rounded-xl overflow-hidden shadow-lg">
+            <img src="gambar/WhatsApp Image 2025-01-01 at 01.17.04 (1).jpeg" alt="Genpita Hafalan" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="font-semibold text-xl mb-3">Genpita Hafalan</h3>
+              <p>Menyetor hafalan dan menguji bacaan Al Quran bersama pembimbing.</p>
+            </div>
+          </div>
+
+          <!-- Additional Cards (Tambahan) -->
+          <div class="info-card bg-white rounded-xl overflow-hidden shadow-lg">
+            <img src="gambar/WhatsApp Image 2024-12-14 at 21.11.15.jpeg" alt="Muraja'ah Kelompok" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="font-semibold text-xl mb-3">Muraja'ah Kelompok</h3>
+              <p>Mengulang hafalan bersama-sama dalam kelompok kecil untuk saling menguatkan.</p>
+            </div>
+          </div>
+
+          <div class="info-card bg-white rounded-xl overflow-hidden shadow-lg">
+            <img src="gambar/WhatsApp Image 2024-09-28 at 08.46.57.jpeg" alt="Tadabbur Quran" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="font-semibold text-xl mb-3">Tadabbur Quran</h3>
+              <p>Mempelajari dan memahami makna Al-Quran dengan pendekatan tafsir tematik.</p>
+            
+            </div>
+          </div>
+
+          <div class="info-card bg-white rounded-xl overflow-hidden shadow-lg">
+            <img src="gambar/WhatsApp Image 2025-01-01 at 01.17.04.jpeg" alt="Evaluasi Hafalan" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="font-semibold text-xl mb-3">Evaluasi Hafalan</h3>
+              <p>Penilaian berkala terhadap kualitas dan kuantitas hafalan yang telah dicapai.</p>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Tahfiz (Tambahan) -->
+    <section class="bg-blue-800 py-16 text-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Program Unggulan</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-blue-700 p-6 rounded-xl hover:bg-blue-600 transition duration-300">
+            <div class="text-4xl mb-4">📚</div>
+            <h3 class="text-xl font-semibold mb-3">Hafalan Satu Hari Satu Ayat</h3>
+            <ul class="space-y-2">
+              <li>• Setiap hari, peserta wajib menghafal minimal satu ayat Al-Qur'an.</li>
+              <li>• Ada sesi setor hafalan secara langsung atau melalui rekaman suara.</li>
+              <li>• Waktu: Senin-Jumat</li>
+              <li>• Evaluasi setiap pekan untuk memastikan kualitas hafalan dan tajwid.</li>
+            </ul> 
+          </div>
+
+          <div class="bg-blue-700 p-6 rounded-xl hover:bg-blue-600 transition duration-300">
+            <div class="text-4xl mb-4">🚀</div>
+            <h3 class="text-xl font-semibold mb-3">Tahfiz Al-Qur'an dengan Metode Tabarruk</h3>
+            <ul class="space-y-2">
+              <li>• Siswa menghafal Al-Qur'an dengan metode Tabarruk , yaitu menghafal berdasarkan ayat-ayat pilihan yang sering dibaca dalam sholat, dzikir, atau memiliki keutamaan khusus.</li>
+              <li>• Program ini membantu siswa menghafal dengan lebih bermakna dan memperkuatnya dengan ayat-ayat yang diamalkan dalam kehidupan sehari-hari.</li>
+            </ul>           
+          </div>
+
+          <div class="bg-blue-700 p-6 rounded-xl hover:bg-blue-600 transition duration-300">
+            <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
+            <h3 class="text-xl font-semibold mb-3">Acara Ayat Perjalanan</h3>
+            <ul class="space-y-2">
+              <li>• Setiap siswa memilih ayat favorit yang memiliki makna mendalam bagi mereka.</li>
+              <li>•Ayat tersebut dihafalkan, ditadabburi, dan dikaitkan dengan pengalaman hidup mereka.</li>
+              <li>• Waktu: Weekend</li>
+              <li>• Ada sesi berbagi cerita tentang bagaimana ayat tersebut menginspirasi mereka./li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimoni (Tambahan) -->
+    <section class="py-16 bg-gray-50" id="testimoni">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Testimoni Peserta</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="testimonial-card">
+            <div class="text-yellow-400 flex mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="mb-6 italic">"Program tahfiz ini sangat membantu saya untuk menghafal Al-Quran dengan metode yang sistematik dan mudah diikuti."</p>
+            <div class="flex items-center">
+             
+              <div>
+                <h4 class="font-semibold">Ahmad Firdaus</h4>
+                <p class="text-sm text-gray-600">Siswa Kelas IX.2 - 8 Juz</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="text-yellow-400 flex mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="mb-6 italic">"Saya sangat senang dengan pembelajaran hafalan yang disertai pemahaman makna ayat, membuat hafalan lebih bermakna."</p>
+            <div class="flex items-center">         
+              <div>
+                <h4 class="font-semibold">Fatimah Azzahra</h4>
+                <p class="text-sm text-gray-600">siswi kelas IX.1 - Juz 30</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="text-yellow-400 flex mb-4">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="mb-6 italic">"Para guru pembina eskul sangat sabar dalam membimbing hafalan kami. Lingkungan belajar yang kondusif membuat proses menghafal terasa lebih mudah."</p>
+            <div class="flex items-center">
+              <div>
+                <h4 class="font-semibold">Muhammad faiz azzam</h4>
+                <p class="text-sm text-gray-600">Siswa Kelas IX.2 - 3 Juz</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (Tambahan) -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Pertanyaan Umum</h2>
+
+        <div class="space-y-6">
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Apakah saya harus memiliki dasar membaca Al-Quran yang baik?</h3>
+            <p>Ya, kemampuan dasar membaca Al-Quran dengan tajwid yang benar sangat penting sebelum memulai program tahfiz. Kami menyediakan program tahsin untuk meningkatkan kualitas bacaan Anda.</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Berapa lama waktu yang dibutuhkan untuk menghafal 30 juz?</h3>
+            <p>Waktu yang dibutuhkan sangat bervariasi tergantung kemampuan dan konsistensi individual. Rata-rata dengan hafalan 1 halaman per hari, 30 juz dapat diselesaikan dalam 2-3 tahun.</p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+            <h3 class="text-xl font-semibold text-blue-700 mb-2">Bagaimana cara mempertahankan hafalan yang sudah dicapai?</h3>
+            <p>Kunci mempertahankan hafalan adalah muraja'ah (mengulang) secara konsisten. Kami menyarankan untuk mengulang minimal 5 halaman setiap hari dan melakukan muraja'ah mingguan untuk seluruh juz yang telah dihafal.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- contact -->
+      <body class="bg-gray-100">
+        <div class="container mx-auto px-4 py-8">
+            <div class="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl shadow-2xl p-6 text-white">
+                <div class="text-center mb-6">
+                    <h2 class="text-3xl font-bold mb-2">Hubungi Kami</h2>
+                    <p class="text-sm opacity-80">Sambungkan diri Anda dengan kami</p>
+                </div>
+                
+                <form class="max-w-lg mx-auto">
+                    <div class="mb-4">
+                        <label for="name" class="block mb-2 text-sm">Nama Lengkap</label>
+                        <input type="text" id="name" class="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="Masukkan nama Anda">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2 text-sm">Alamat Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="email@contoh.com">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="message" class="block mb-2 text-sm">Pesan</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/10 focus:outline-none focus:ring-2 focus:ring-white/30" placeholder="Tulis pesan Anda di sini"></textarea>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-white text-blue-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                            Kirim Pesan
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="mt-6 text-center">
+                    <div class="flex justify-center space-x-4 text-white opacity-80">
+                        <a href="#" class="hover:opacity-100 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-phone">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:opacity-100 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-mail">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        <a href="#" class="hover:opacity-100 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="feather feather-map-pin">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      <!-- end -->
+
+    </section>
+  </body>
+</html>

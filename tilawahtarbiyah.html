@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tilawah Genpita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="gambar/genpita.JPG" />
+
+    <style>
+      :root {
+        --primary-color: #2a5d42;
+        --accent-color: #d4af37;
+        --text-dark: #1a1a1a;
+        --text-light: #f8f9fa;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f8f6f1;
+        color: var(--text-dark);
+      }
+
+      .islamic-pattern {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><path fill="%232a5d42" opacity="0.1" d="M50 0L0 50 50 100 100 50 50 0z"/></svg>');
+        opacity: 0.1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+
+      header {
+        background: rgba(42, 93, 66, 0.95);
+        padding: 1rem 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-link {
+        color: var(--text-light) !important;
+        font-weight: 500;
+        position: relative;
+        margin: 0 1rem;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--accent-color);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .hero-section {
+        min-height: 100vh;
+        background: linear-gradient(rgba(42, 93, 66, 0.8), rgba(42, 93, 66, 0.9)), url("gambar/background-masjid.jpg") center/cover;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 6rem 0;
+      }
+
+      .quran-verse {
+        font-family: "Amiri", serif;
+        font-size: 1.5rem;
+        color: var(--text-light);
+        text-align: center;
+        max-width: 800px;
+        margin: 2rem auto;
+        line-height: 1.6;
+        border-right: 3px solid var(--accent-color);
+        padding: 1rem;
+      }
+
+      .feature-card {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 1rem;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .activity-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .activity-item {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .activity-item img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .activity-item:hover img {
+        transform: scale(1.05);
+      }
+
+      .timeline-section {
+        position: relative;
+        padding: 4rem 0;
+        background: #f5f1e8;
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 2rem;
+        margin-left: 30px;
+        border-left: 3px solid var(--primary-color);
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 24px;
+        width: 20px;
+        height: 20px;
+        background: var(--accent-color);
+        border-radius: 50%;
+      }
+
+      @media (max-width: 768px) {
+        .quran-verse {
+          font-size: 1.2rem;
+          padding: 0.5rem;
+        }
+
+        .nav-link {
+          margin: 0.5rem 0;
+        }
+
+        .activity-gallery {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Style tambahan */
+      .islamic-pattern-box {
+        background-image: radial-gradient(circle at center, var(--primary-color) 0%, transparent 20%), linear-gradient(45deg, transparent 49%, var(--accent-color) 50%, transparent 51%);
+        background-size: 40px 40px;
+        border: 2px solid var(--accent-color);
+      }
+
+      .achievement-section {
+        background: linear-gradient(135deg, #2a5d42 0%, #1a3a27 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .achievement-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="gambar/WhatsApp Image 2024-11-28 at 18.44.32.jpeg" viewBox="0 0 100 100" width="100" height="100"><path fill="%23ffffff" opacity="0.1" d="M50 0L0 50 50 100 100 50 50 0z"/></svg>');
+        opacity: 0.1;
+      }
+
+      .testimonial-card {
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .ayat-scroller {
+        font-family: "Amiri", serif;
+        border-top: 3px solid var(--accent-color);
+        border-bottom: 3px solid var(--accent-color);
+      }
+
+      .counter {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      /* Animasi counter */
+      @keyframes count-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .counter-animate {
+        animation: count-up 1s ease-out;
+      }
+
+  .timeline {
+    border-left: 4px solid #ccc;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -13px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid white;
+    z-index: 1;
+  }
+
+  .timeline-item {
+    position: relative;
+  }
+
+  .timeline-content {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 1rem;
+    }
+
+    .timeline-content {
+      margin-left: 1.5rem;
+    }
+  }
+
+  #terimakasih {
+    z-index: 1;
+  }
+
+  #terimakasih .btn-outline-success {
+    border-color: #28a745;
+    color: #28a745;
+  }
+
+  #terimakasih .btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+  }
+</style>
+
+    </style>
+  </head>
+
+  <body>
+    <header class="fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="gambar/genpita.JPG" alt="Logo" width="50" class="me-2" />
+            <span class="h4" style="font-family: 'Amiri', serif">GENPITA</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="inde.html">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tahsin.html">Tahsin</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tahfiz.html">Tahfiz</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tarbiyah.html">Tarbiyah</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container text-center text-light" data-aos="fade-up">
+          <h1 class="display-3 fw-bold mb-4" style="font-family: 'Amiri', serif">Seni Membaca Al-Qur'an</h1>
+          <div class="quran-verse" data-aos="zoom-in">
+            "Dan bacalah Al-Qur'an dengan tartil (perlahan-lahan)" <br />
+            (QS. Al-Muzzammil: 4)
+          </div>
+          <div class="mt-5" data-aos="fade-up" data-aos-delay="200">
+            <img src="gambar/logo tilawah.png" alt="Ilustrasi Al-Qur'an" class="img-fluid" style="max-height: 300px" />
+          </div>
+        </div>
+      </section>
+
+      <section class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-right">
+              <div class="feature-card">
+                <h3 class="text-center mb-3" style="color: var(--primary-color)">
+                  <i class="fas fa-book-quran fs-1 mb-3"></i><br />
+                  Pengertian Tilawah
+                </h3>
+                <p class="text-center">Tilawah adalah seni membaca Al-Qur'an dengan memperhatikan kaidah tajwid, makhraj, dan adab membaca untuk mencapai kesempurnaan dalam melantunkan ayat-ayat suci.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up">
+              <div class="feature-card">
+                <h3 class="text-center mb-3" style="color: var(--primary-color)">
+                  <i class="fas fa-mosque fs-1 mb-3"></i><br />
+                  Keutamaan Tilawah
+                </h3>
+                <p class="text-center">Setiap huruf yang dibaca mengandung sepuluh kebaikan. Tilawah yang baik membuka pintu hidayah dan meningkatkan kualitas spiritual pembacanya.</p>
+              </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-left">
+              <div class="feature-card">
+                <h3 class="text-center mb-3" style="color: var(--primary-color)">
+                  <i class="fas fa-star-and-crescent fs-1 mb-3"></i><br />
+                  Metode Pembelajaran
+                </h3>
+                <p class="text-center">Sistem pembelajaran bertahap mulai dari dasar tajwid, latihan makhraj, hingga pembacaan tartil dengan bimbingan ustadz/ustadzah berpengalaman.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">Proses Pembelajaran</h2>
+          <div class="timeline-item" data-aos="fade-right">
+            <h4>1. Tahsin Dasar</h4>
+            <p>Pembelajaran dasar tajwid dan makhraj huruf</p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+            <h4>2. Tahsin Lanjutan</h4>
+            <p>Penerapan tajwid dalam bacaan panjang dan waqaf</p>
+          </div>
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+            <h4>3. Tartil Al-Qur'an</h4>
+            <p>Pembacaan Al-Qur'an dengan tempo yang tepat dan penghayatan</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tambahkan setelah section galeri kegiatan -->
+
+      <!-- Section Kaligrafi Interaktif -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6" data-aos="fade-right">
+              <div class="islamic-pattern-box p-4 rounded-3">
+                <img src="gambar/download.png" alt="Kaligrafi Quran" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-left">
+              <h2 class="mb-4" style="font-family: 'Amiri', serif">Keindahan Lantunan Quran</h2>
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"><i class="fas fa-quote-left me-3"></i>Filosofi Tilawah</button>
+                  </h3>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      Tilawah merupakan proses komunikasi spiritual antara hamba dengan Pencipta melalui firman-firman-Nya. Setiap huruf yang dilantunkan mengandung makna dan energi ilahiah yang mampu menyentuh relung jiwa.
+                    </div>
+                  </div>
+                </div>
+                <!-- Tambahkan item accordion lainnya -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Pencapaian -->
+      <section class="achievement-section py-5 text-white">
+        <div class="container text-center">
+          <h2 class="mb-5" data-aos="fade-up">Pencapaian Kami</h2>
+          <div class="row g-4">
+            <div class="col-md-3" data-aos="zoom-in">
+              <div class="achievement-item bg-white text-dark p-4 rounded-3 shadow">
+                <i class="fas fa-users fs-1 mb-3 text-primary"></i>
+                <h3 class="counter" data-count="500">45</h3>
+                <p>Anggota Aktif setiap minggu</p>
+              </div>
+            </div>
+            <!-- pencapaian -->
+            <div class="col-md-3" data-aos="zoom-in">
+              <div class="achievement-item bg-white text-dark p-4 rounded-3 shadow">
+                <i class="fas fa-smile-beam fs-1 mb-3 text-primary"></i>
+                <h3 class="counter" data-count="500">95%</h3>
+                <p>tingkat kenyaman belajar para anggota Eskul</p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-3" data-aos="zoom-in">
+              <div class="achievement-item bg-white text-dark p-4 rounded-3 shadow">
+                <i class="fas fa-book-open fs-1 mb-3 text-primary"></i>
+                <h3 class="counter" data-count="500">Tilawah</h3>
+                <p>salah satu bidang yg palingbanyak di sukai</p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-md-3" data-aos="zoom-in">
+              <div class="achievement-item bg-white text-dark p-4 rounded-3 shadow">
+                <i class="fas fa-microphone-alt fs-1 mb-3 text-primary"></i>
+                <h3 class="counter" data-count="500">90%</h3>
+                <p>anggota eskul menyukai aktivitas melantunkan ayat Al'Quran </p>
+              </div>
+            </div>
+            <!-- Tambahkan item pencapaian lainnya -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Testimoni -->
+      <section class="testimonial-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">Apa Kata Mereka?</h2>
+          <div class="row g-4">
+            <!-- Testimoni 1 -->
+            <div class="col-md-4" data-aos="flip-left">
+              <div class="testimonial-card p-4 rounded-3 shadow">
+                <div class="user-info d-flex align-items-center mb-3">
+                  <img src="gambar/ft cowo 4.jpg" alt="Ahmad Farid" class="rounded-circle me-3" width="60" />
+                  <div>
+                    <h5>Muh Faiz azzam</h5>
+                    <small>Siswa kelas IX.2</small>
+                  </div>
+                </div>
+                <p class="text-muted">"Sejak bergabung dengan Genpita, kemampuan tilawah saya meningkat signifikan. Metode pengajaran yang menyenangkan dan mentor yang sabar membuat proses belajar menjadi bermakna."</p>
+                <div class="rating text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="col-md-4" data-aos="flip-up" data-aos-delay="100">
+              <div class="testimonial-card p-4 rounded-3 shadow">
+                <div class="user-info d-flex align-items-center mb-3">
+                  <img src="gambar/cadar 5.jpg" alt="Siti Nurhaliza" class="rounded-circle me-3" width="60" />
+                  <div>
+                    <h5>Nisa Azzahra</h5>
+                    <small>Siswi Kelas IX.1</small>
+                  </div>
+                </div>
+                <p class="text-muted">"Alhamdulillah melalui Genpita saya bisa memperbaiki bacaan Quran sambil mengurus rumah tangga. Materi yang modular sangat memudahkan untuk belajar mandiri."</p>
+                <div class="rating text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="col-md-4" data-aos="flip-right" data-aos-delay="200">
+              <div class="testimonial-card p-4 rounded-3 shadow">
+                <div class="user-info d-flex align-items-center mb-3">
+                  <img src="gambar/ft kontak.jpg" alt="Rina Wijaya" class="rounded-circle me-3" width="60" />
+                  <div>
+                    <h5>Bapak Surdirman S.ag ,M.pd.i</h5>
+                    <small>Guru Tilawah</small>
+                  </div>
+                </div>
+                <p class="text-muted">"Program di Genpita sangat sistematis dan komprehensif. Sekarang saya bisa mengajar murid-murid TPQ dengan teknik tilawah yang lebih baik berkat ilmu dari sini."</p>
+                <div class="rating text-warning">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Section Ayat Bergulir -->
+      <div class="ayat-scroller bg-primary text-white py-3">
+        <div class="container">
+          <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+            <span style="font-family: 'Amiri', serif; font-size: 1.5rem"> ﴾ وَرَتِّلِ ٱلۡقُرۡءَانَ تَرۡتِیلًا ﴿ </span>
+            <span class="mx-5">|</span>
+            <span>"Dan bacalah Al-Qur'an itu dengan perlahan-lahan" (QS. Al-Muzzammil: 4)</span>
+          </marquee>
+        </div>
+      </div>
+
+      <section class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-5" data-aos="fade-up">Galeri Kegiatan</h2>
+          <div class="activity-gallery">
+            <div class="activity-item" data-aos="zoom-in">
+              <img src="gambar/WhatsApp Image 2024-10-01 at 06.59.37.jpeg" alt="Sesi Belajar" />
+            </div>
+            <div class="activity-item" data-aos="zoom-in" data-aos-delay="100">
+              <img src="gambar/WhatsApp Image 2025-01-09 at 01.26.12.jpeg" alt="Diskusi Kelompok" />
+            </div>
+            <div class="activity-item" data-aos="zoom-in" data-aos-delay="200">
+              <img src="gambar/WhatsApp Image 2024-09-28 at 08.27.41.jpeg" alt="Presentasi Materi" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <!-- timeline -->
+      <section class="py-5 bg-light" id="tilawah-timeline">
+        <div class="container">
+          <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="fw-bold">Perjalanan Tilawah</h2>
+            <p class="text-muted">Langkah demi langkah menuju bacaan yang indah dan benar.</p>
+          </div>
+      
+          <div class="timeline position-relative">
+            <div class="timeline-item mb-5" data-aos="fade-right">
+              <div class="timeline-dot bg-success"></div>
+              <div class="timeline-content shadow rounded-3 p-4 bg-white">
+                <h5 class="fw-bold">1. Pengenalan Tajwid</h5>
+                <p class="text-muted mb-0">Mempelajari huruf hijaiyah, makhraj, dan hukum bacaan dasar.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-item mb-5" data-aos="fade-left">
+              <div class="timeline-dot bg-primary"></div>
+              <div class="timeline-content shadow rounded-3 p-4 bg-white">
+                <h5 class="fw-bold">2. Latihan Irama Tilawah</h5>
+                <p class="text-muted mb-0">Mempraktikkan irama Al-Qur’an (bayati, hijaz, dll) dengan pembina.</p>
+              </div>
+            </div>
+      
+            <div class="timeline-item mb-5" data-aos="fade-right">
+              <div class="timeline-dot bg-warning"></div>
+              <div class="timeline-content shadow rounded-3 p-4 bg-white">
+                <h5 class="fw-bold">3. Uji Publik & Penampilan</h5>
+                <p class="text-muted mb-0">Peserta menampilkan bacaan di depan umum, mengasah mental dan teknik.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- end -->
+
+      <!-- ucapam -->
+      <section class="py-5 bg-white position-relative overflow-hidden" id="terimakasih">
+        <!-- Background motif Islami -->
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background: url('assets/img/islamic-pattern.png') center/cover no-repeat; opacity: 0.07;"></div>
+        
+        <div class="container position-relative text-center" data-aos="fade-up">
+          <img src="gambar/logo tilawah.png" width="80" alt="Icon Tilawah" class="mb-3">
+          
+          <h2 class="fw-bold mb-3" style="color: #2c3e50;">Terima Kasih</h2>
+          <p class="lead text-muted mb-4">
+            Jazakumullahu khairan atas kunjungan dan semangat antum dalam mempelajari <strong>Tilawah Al-Qur’an</strong>.<br>
+            Semoga setiap huruf yang dibaca menjadi cahaya bagi kehidupan kita.
+          </p>
+      
+          <a href="inde.html" class="btn btn-outline-success px-4 py-2 rounded-pill">
+            Kembali ke Beranda
+          </a>
+        </div>
+      </section>
+      
+      <!-- end -->
+
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <!-- Logo dan deskripsi -->
+          <div class="col-md-4 mb-4">
+            <img src="gambar/logo tilawah.png" alt="Logo Tilawah" width="60" class="mb-2">
+            <h4 class="fw-bold mt-2">Tilawah Qur'an</h4>
+            <p class="text-muted">Membentuk generasi Qur'ani yang cinta membaca dan mengamalkan Al-Qur’an.</p>
+          </div>
+    
+          <!-- Navigasi -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-semibold">pembina Eskul</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-muted text-decoration-none">Surdirman S.ag ,M.pd.i</a></li>
+              <li><a href="#" class="text-muted text-decoration-none">zulfikar S.pd</a></li>
+              <li><a href="#" class="text-muted text-decoration-none">Syahrul Ramadhan (ketua genpita)</a></li>
+            </ul>
+          </div>
+    
+          <!-- Sosial Media -->
+          <div class="col-md-4 mb-4">
+            <h5 class="fw-semibold">Ikuti Kami</h5>
+            <a href="#" class="text-white me-3"><i class="fab fa-instagram fs-4"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-facebook fs-4"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-youtube fs-4"></i></a>
+          </div>
+        </div>
+    
+        <hr class="text-secondary">
+    
+        <div class="text-center text-muted">
+          &copy; 2025 Tilawah Qur'an. Semua Hak Dilindungi.
+        </div>
+      </div>
+    </footer>
+    
+    <!-- end footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Icon Feather -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="icon" href="gambar/genpita.JPG" />
+
+    <style>
+      :root {
+        --islamic-green: #2a6f2a;
+        --gold: #c5a368;
+        --cream: #f8f5e4;
+      }
+
+      body {
+        background-color: var(--cream);
+        font-family: "Amiri", serif;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+          url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><text x="50%" y="50%" font-family="Scheherazade New" font-size="20" fill="%232a6f2a22" text-anchor="middle" dominant-baseline="middle">ﷲ</text></svg>');
+      }
+
+      .islamic-border {
+        border: 3px solid var(--islamic-green);
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .islamic-border::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border: 2px solid var(--gold);
+        border-radius: 15px;
+        pointer-events: none;
+      }
+
+      h1 {
+        margin-top: 20px;
+        color: var(--islamic-green);
+        font-family: "Scheherazade New", serif;
+        position: relative;
+        padding-bottom: 15px;
+      }
+
+      h1::after {
+        content: "";
+        display: block;
+        width: 150px;
+        height: 3px;
+        background: linear-gradient(90deg, var(--islamic-green) 30%, var(--gold) 70%);
+        margin: 15px auto 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 25px;
+      }
+
+      .grid-item {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        color: var(--islamic-green);
+        transition: all 0.3s ease;
+        border: 2px solid var(--gold);
+        position: relative;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .grid-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .grid-item::before {
+        content: "﷽";
+        font-family: "Scheherazade New";
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        color: var(--gold);
+        font-size: 1.2em;
+        opacity: 0.3;
+      }
+
+      .lead {
+        color: var(--islamic-green);
+        font-size: 1.4rem;
+        margin: 20px 0;
+      }
+
+      .btn-primary {
+        background: var(--islamic-green);
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--gold);
+        transform: scale(1.05);
+      }
+
+      .img-thumbnail {
+        border: 3px solid var(--gold);
+        padding: 5px;
+        background: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .quran-verse {
+        text-align: center;
+        color: var(--islamic-green);
+        font-style: italic;
+        margin: 30px 0;
+        border-top: 2px solid var(--gold);
+        border-bottom: 2px solid var(--gold);
+        padding: 15px;
+      }
+    </style>
+
+    <title>GENPITA - Generasi Pecinta Al-Qur'an</title>
+  </head>
+  <body>
+    <div class="container islamic-border my-5">
+      <section class="jumbotron text-center py-4">
+        <img src="gambar/genpita.JPG" alt="GENPITA" width="200" class="rounded-circle img-thumbnail mt-4" />
+        <h1 class="display-4 mt-3">جـنـڤـيـتـا</h1>
+        <p class="lead"><b>Generasi Pecinta Al-Qur'an</b></p>
+
+        <div class="quran-verse">
+          <p>"Dan sesungguhnya telah Kami mudahkan Al-Qur'an untuk pelajaran,<br />maka adakah orang yang mengambil pelajaran?"</p>
+          <small>(QS. Al-Qamar: 17)</small>
+        </div>
+
+        <div class="text-center my-4">
+          <a href="inde.html" class="btn btn-primary" data-aos="fade-up"> <i class="fas fa-arrow-left me-2"></i>Kembali ke Halaman Utama </a>
+        </div>
+
+        <h1 data-aos="fade-up">Daftar Anggota Genpita</h1>
+        <h3 class="text-muted mb-4" data-aos="fade-up" data-aos-delay="200">Tahun Ajaran 1445 H / 2023-2024 M</h3>
+
+        <div class="grid">
+          <!-- Kepengurusan -->
+          <div class="grid-item leadership" data-aos="zoom-in">
+            <div>
+              <i class="fas fa-star-of-david text-warning"></i><br />
+              <h5 class="mb-0">Syahrul Ramadhan</h5>
+              <small class="text-muted">Ketua Genpita</small>
+            </div>
+          </div>
+
+          <div class="grid-item leadership" data-aos="zoom-in" data-aos-delay="100">
+            <div>
+              <i class="fas fa-star-of-david text-warning"></i><br />
+              <h5 class="mb-0">Muh. Faiz Azzam</h5>
+              <small class="text-muted">Wakil Ketua</small>
+            </div>
+          </div>
+
+          <!-- Anggota -->
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Nurul Cafiqah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Zainab</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Aliyah Az Zahrah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Faiz Pratama Hamizan</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Alya Rezky Jazilah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">An Nuraeni Awliyah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Fuad Mushawwir Syahrun</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Khadijah Ramadhani</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Indira Putri</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Naila Hamzah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Muhyi Wahyu Hidayat</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Nafilla Syakira Asdar</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Salsabila</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Muh. Adzan Faqih Hidayat</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Achmad Farhan Saputra</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Muh. Faiz Nur Syahrun</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">C. Rizka Desmifawa Canggrangeni</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Nur Ismayanty</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Khaerul Amin</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Riskawati</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Ahmad Fikri Asyraf</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Andi Fuad Ikhsan Abdullah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Ahmad Faruq Isyraf</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Putri Intan Rahmatulkhulud</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Alif</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Muh. Rizal Ishak</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Muh. Aif</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Aurel</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Ahmad Mubarrok</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Sulfa Sakirah Ilmi</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Andi Lathifah Khaerunnisa</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Malda Sahniafardin</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Magfirah Abadiyyah Ivana</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Andi Rifdah Ulya</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Zifana Marsya Khamsiyatun</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Nurfatimah Azzahra</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Nurul Istiqomah</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Elvani Fitri</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Elvina Fitri</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Muh. Farhan Aziz</div>
+          <div class="grid-item" data-aos="zoom-in" data-aos-delay="100">Zdaimatunnisa</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+  </body>
+</html>

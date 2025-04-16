@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Genpita</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #1e3c72, #2a5298);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .timeline {
+        position: relative;
+        width: 80%;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .timeline-item::after {
+        content: "";
+        position: absolute;
+        top: 25px;
+        right: -12px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border: 4px solid rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+      }
+
+      .timeline-item:nth-child(even)::after {
+        left: -12px;
+        right: auto;
+      }
+
+      .content {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .content h3 {
+        margin: 0;
+        color: #fdbb2d;
+      }
+
+      .content p {
+        margin: 5px 0 0;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .timeline-item {
+          width: 100%;
+          left: 0 !important;
+        }
+
+        .timeline-item:nth-child(even)::after {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        .timeline::before {
+          left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="timeline">
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tahsin</h3>
+          <p>Memperbaiki bacaan Al-Qur'an dengan pembimbing ahli.</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tahfiz</h3>
+          <p>Menghafal Al-Qur'an dengan metode efektif dan mendalam.</p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tilawah</h3>
+          <p>Meningkatkan keindahan bacaan Al-Qur'an melalui pelatihan khusus.</p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tarbiyah</h3>
+          <p>Membentuk karakter Islami untuk generasi yang lebih baik.</p>
+        </div>
+      </div>
+      <div class="timeline">
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tahsin</h3>
+          <p>Memperbaiki bacaan Al-Qur'an dengan pembimbing ahli.</p>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tahfiz</h3>
+          <p>Menghafal Al-Qur'an dengan metode efektif dan mendalam.</p>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tilawah</h3>
+          <p>Meningkatkan keindahan bacaan Al-Qur'an melalui pelatihan khusus.</p>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="timeline-item">
+        <div class="content">
+          <h3>Tarbiyah</h3>
+          <p>Membentuk karakter Islami untuk generasi yang lebih baik.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

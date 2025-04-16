@@ -1,0 +1,90 @@
+/* styles.css */
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header.hero-section {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.prestasi-section,
+.berita-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #4e54c8;
+}
+
+.prestasi-grid,
+.berita-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.prestasi-item,
+.berita-item {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.prestasi-item:hover,
+.berita-item:hover {
+  transform: translateY(-10px);
+}
+
+.prestasi-item img,
+.berita-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.prestasi-item h3,
+.berita-item h3 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.prestasi-item p,
+.berita-item p {
+  font-size: 1rem;
+  margin: 10px;
+  color: #666;
+}
+
+.berita-item a {
+  display: block;
+  text-align: center;
+  background: #4e54c8;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}

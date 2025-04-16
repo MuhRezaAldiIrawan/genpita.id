@@ -1,0 +1,55 @@
+body {
+  font-family: arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-bottom: 0;
+  background-image: url("gambar/bakground.jpg");
+}
+
+.container {
+  max-width: 800px;
+  text-align: center;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: cornflowerblue;
+}
+
+.h2 {
+  font-size: 1.5em;
+  color: chartreuse;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.grid-item {
+  background-color: rgb(130, 212, 204);
+  color: #333;
+  border: 1px solid #32de2c;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid-item:hover {
+  background-color: rgb(125, 255, 74);
+  color: #fff;
+  cursor: pointer;
+}

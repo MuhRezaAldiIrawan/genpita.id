@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- icon data feather -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- awal navbar -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+  <!-- my css -->
+  <link rel="stylesheet" href="kontak.css" />
+  <link rel="icon" href="gambar/genpita.JPG" />
+
+  <title>About web developer web</title>
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark shadow" style="background-color: hsl(210, 97%, 54%)">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://sendthesong.xyz/details/6736116d3c9825b0de1f7166"> <img src="gambar/IMG_20240919_093944-removebg-preview.png" weight="50"
+          height="50" alt="genpita" /> <B>GENPITA</B></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="inde.html" class="link" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#" id="about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" class="link">media sosial</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item"
+                  href="https://www.tiktok.com/@sang_pendakwah_islamic?is_from_webapp=1&sender_device=pc">Tiktok</a>
+              </li>
+              <li><a class="dropdown-item"
+                  href="https://www.instagram.com/syhrulramdhn1_/profilecard/?igsh=MmtjcXF6emVqZmw5">INSTAGRAM</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="game.html">GAME ID</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">contant</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  </div>
+  <!-- akhir navbar -->
+
+  <!-- loading -->
+
+  <!-- end -->
+
+  <!-- Hero section end -->
+
+  <!-- Hero Section -->
+  <section class="hero text-white text-center py-5" style="background: linear-gradient(135deg, #3498db, #9b59b6);">
+    <div class="container">
+      <p class="lead"
+      style="font-size: 1.5rem; color: gold; font-style: italic; margin-top: 10px; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">
+      ٱلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ
+      <br>
+      بِسْمِ اللّهِ الرَّحْمَنِ الرَّحِيْ
+    </p>
+      <h1 class="display-4" style="font-weight: bold; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
+        Welcome to My Portfolio
+      </h1>
+   
+      <h2 class="typing-effect">web ini Menjelaskan tentang pengalaman pribadi saya</h2>
+
+      <script>
+        const typingElement = document.querySelector('.typing-effect');
+        const text = typingElement.textContent;
+
+        // Mengatur ulang animasi setiap selesai
+        typingElement.textContent = '';
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                typingElement.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 100); // Kecepatan ketikan (100ms per karakter)
+            }
+        }
+
+        type();
+    </script>
+
+      <a href="#saya" class="btn btn-light mt-4"
+        style="font-size: 1.2rem; font-weight: bold; border-radius: 30px; padding: 10px 30px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+        tengtang aku
+      </a>
+    </div>
+  </section>
+
+
+  <!-- About Me -->
+  <div class="wafe">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#5000ca" fill-opacity="1"
+        d="M0,256L7.3,240C14.5,224,29,192,44,197.3C58.2,203,73,245,87,272C101.8,299,116,309,131,298.7C145.5,288,160,256,175,234.7C189.1,213,204,203,218,213.3C232.7,224,247,256,262,256C276.4,256,291,224,305,181.3C320,139,335,85,349,64C363.6,43,378,53,393,64C407.3,75,422,85,436,128C450.9,171,465,245,480,256C494.5,267,509,213,524,186.7C538.2,160,553,160,567,176C581.8,192,596,224,611,218.7C625.5,213,640,171,655,165.3C669.1,160,684,192,698,181.3C712.7,171,727,117,742,85.3C756.4,53,771,43,785,80C800,117,815,203,829,245.3C843.6,288,858,288,873,277.3C887.3,267,902,245,916,240C930.9,235,945,245,960,224C974.5,203,989,149,1004,112C1018.2,75,1033,53,1047,74.7C1061.8,96,1076,160,1091,197.3C1105.5,235,1120,245,1135,240C1149.1,235,1164,213,1178,213.3C1192.7,213,1207,235,1222,245.3C1236.4,256,1251,256,1265,229.3C1280,203,1295,149,1309,149.3C1323.6,149,1338,203,1353,218.7C1367.3,235,1382,213,1396,224C1410.9,235,1425,277,1433,298.7L1440,320L1440,0L1432.7,0C1425.5,0,1411,0,1396,0C1381.8,0,1367,0,1353,0C1338.2,0,1324,0,1309,0C1294.5,0,1280,0,1265,0C1250.9,0,1236,0,1222,0C1207.3,0,1193,0,1178,0C1163.6,0,1149,0,1135,0C1120,0,1105,0,1091,0C1076.4,0,1062,0,1047,0C1032.7,0,1018,0,1004,0C989.1,0,975,0,960,0C945.5,0,931,0,916,0C901.8,0,887,0,873,0C858.2,0,844,0,829,0C814.5,0,800,0,785,0C770.9,0,756,0,742,0C727.3,0,713,0,698,0C683.6,0,669,0,655,0C640,0,625,0,611,0C596.4,0,582,0,567,0C552.7,0,538,0,524,0C509.1,0,495,0,480,0C465.5,0,451,0,436,0C421.8,0,407,0,393,0C378.2,0,364,0,349,0C334.5,0,320,0,305,0C290.9,0,276,0,262,0C247.3,0,233,0,218,0C203.6,0,189,0,175,0C160,0,145,0,131,0C116.4,0,102,0,87,0C72.7,0,58,0,44,0C29.1,0,15,0,7,0L0,0Z">
+      </path>
+    </svg>
+  </div>
+  <section id="saya" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2>About Me</h2>
+      <hr class="w-25 mx-auto mb-4">
+      <img src="gambar/foto.syahrul.jpeg" class="rounded-circle img-thumbnail mb-3" width="200" alt="Syahrul Ramadhan">
+      <h3>Syahrul Ramadhan</h3>
+      <p class="text-muted">Leader of GENPITA | Web Developer</p>
+      <p>Assalamualaikum waromautullahi waborokatuh,"Hey, saya Syahrul Ramdhan saya Ketua genpita eskul ini dan
+        sekaligus pembuat web ini! Saya punya dua hobi yang jadi bagian besar dari hidup saya: berbagi nasihat dengan
+        teman-teman dan menciptakan keajaiban di dunia web. Dengan pengalaman di ceramah, saya suka menginspirasi orang
+        lain dengan kata-kata. Di sisi lain, saya juga mencintai tantangan dalam mengembangkan website menggunakan HTML
+        dan CSS. Setiap proyek adalah kesempatan untuk menyampaikan cerita dan kreativitas saya. Selamat datang di
+        portofolio saya—siap untuk menjelajahi dunia ide dan inovasi bersama?"</p>
+    </div>
+  </section>
+
+  
+
+
+  <!-- skill -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#230cd4" fill-opacity="1"
+      d="M0,96L13.3,112C26.7,128,53,160,80,160C106.7,160,133,128,160,101.3C186.7,75,213,53,240,48C266.7,43,293,53,320,64C346.7,75,373,85,400,117.3C426.7,149,453,203,480,234.7C506.7,267,533,277,560,282.7C586.7,288,613,288,640,266.7C666.7,245,693,203,720,208C746.7,213,773,267,800,261.3C826.7,256,853,192,880,170.7C906.7,149,933,171,960,176C986.7,181,1013,171,1040,192C1066.7,213,1093,267,1120,245.3C1146.7,224,1173,128,1200,112C1226.7,96,1253,160,1280,197.3C1306.7,235,1333,245,1360,208C1386.7,171,1413,85,1427,42.7L1440,0L1440,320L1426.7,320C1413.3,320,1387,320,1360,320C1333.3,320,1307,320,1280,320C1253.3,320,1227,320,1200,320C1173.3,320,1147,320,1120,320C1093.3,320,1067,320,1040,320C1013.3,320,987,320,960,320C933.3,320,907,320,880,320C853.3,320,827,320,800,320C773.3,320,747,320,720,320C693.3,320,667,320,640,320C613.3,320,587,320,560,320C533.3,320,507,320,480,320C453.3,320,427,320,400,320C373.3,320,347,320,320,320C293.3,320,267,320,240,320C213.3,320,187,320,160,320C133.3,320,107,320,80,320C53.3,320,27,320,13,320L0,320Z">
+    </path>
+  </svg>
+  <section id="skill" style="background-color: #230cd4;">
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <h1 class="fw-bold text-center">My Skill</h1>
+            <hr style="border: 5px solid black; width: 100%;">
+          </div>
+
+          <div class="col-10 text-center mt-3 " data-aos="fade-up">
+            <div class="images">
+              <img src="gambar/gambar html" alt="html" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/css" alt="css" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/js cuy.png" alt="git" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/canva.icon" alt="canva" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/capcut icon.jpg" alt="cc" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/cpt icon.jpg" alt="cpt" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/github icon" alt="ml" width="200" class="rounded-circle img-thumbnail">
+              <img src="gambar/dicoding img.jfif" alt="" width="200" class="rounded-circle img-thumbnail">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <!-- akhir skill -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#230cd4" fill-opacity="1"
+      d="M0,96L14.1,90.7C28.2,85,56,75,85,101.3C112.9,128,141,192,169,192C197.6,192,226,128,254,85.3C282.4,43,311,21,339,42.7C367.1,64,395,128,424,154.7C451.8,181,480,171,508,176C536.5,181,565,203,593,208C621.2,213,649,203,678,213.3C705.9,224,734,256,762,266.7C790.6,277,819,267,847,250.7C875.3,235,904,213,932,192C960,171,988,149,1016,128C1044.7,107,1073,85,1101,117.3C1129.4,149,1158,235,1186,277.3C1214.1,320,1242,320,1271,282.7C1298.8,245,1327,171,1355,144C1383.5,117,1412,139,1426,149.3L1440,160L1440,0L1425.9,0C1411.8,0,1384,0,1355,0C1327.1,0,1299,0,1271,0C1242.4,0,1214,0,1186,0C1157.6,0,1129,0,1101,0C1072.9,0,1045,0,1016,0C988.2,0,960,0,932,0C903.5,0,875,0,847,0C818.8,0,791,0,762,0C734.1,0,706,0,678,0C649.4,0,621,0,593,0C564.7,0,536,0,508,0C480,0,452,0,424,0C395.3,0,367,0,339,0C310.6,0,282,0,254,0C225.9,0,198,0,169,0C141.2,0,113,0,85,0C56.5,0,28,0,14,0L0,0Z">
+    </path>
+  </svg>
+
+  <h2 class="text-center">
+    Proses pembelajaran kodingan ku
+  </h2>
+
+  <div class="container">
+    <!-- Progress Bar 1 -->
+    <div class="progress-text"><strong>Dasar Html</strong> </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 55%" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100">HTML 55%</div>
+    </div>
+
+    <!-- Progress Bar 2 -->
+    <div class="progress-text"><strong>Dasar css</strong></div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 35%" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100">CSS 35%</div>
+    </div>
+
+    <!-- Progress Bar 3 -->
+    <div class="progress-text"><strong>Dasar Javascripst</strong> </div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 20%" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100">JAVA 20%</div>
+    </div>
+
+    <!-- Progress Bar 4 -->
+    <div class="progress-text"><strong>Belajar sadar diri</strong></div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%" aria-valuenow="10"
+        aria-valuemin="0" aria-valuemax="100">NYATA MA INI</div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <!-- support apk -->
+  <div class="container" style="margin-top: 10px;">
+    <div class="row text-center">
+      <div class="col">
+        <h2 style="margin-top: 100px;"><b> Universitas Impian</b></h2>
+        <hr>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="ABOUT text-center">
+    <img src="gambar/unhas.jfif" alt="GENPITA" width="200" class="rounded-circle img-thumbnail" />
+    <h1 class="display-4"><b> Universitas Hasanuddin</b></h1>
+    <p class="lead" style="margin-bottom: 100px;"><b>Bismillah</b> | <b>Kun faya kun</b></p>
+
+    <div class="row g-0 bg-light position-relative">
+      <div class="col-md-6 mb-md-0 p-md-4">
+        <img src="gambar/kampus.jfif" class="w-100" alt="genpita" width="250" height="300">
+      </div>
+      <div class="col-md-6 p-4 ps-md-0">
+        <h5 class="mt-0"><b>Universitas Hasanuddin</b></h5>
+        <p>Saya bercita-cita untuk melanjutkan pendidikan di Universitas Hasanuddin (UNHAS), sebuah perguruan tinggi
+          negeri terkemuka di Makassar yang dikenal dengan reputasinya di bidang pendidikan dan penelitian. Sebagai
+          universitas yang menginspirasi banyak generasi, UNHAS menawarkan berbagai program studi unggulan yang dapat
+          membantu saya mewujudkan impian menjadi profesional di bidang yang saya minati. Saya ingin mengikuti jejak
+          para alumni UNHAS yang sukses dan memberikan kontribusi nyata bagi masyarakat, terutama di Indonesia Timur.
+        </p>
+
+      </div>
+    </div>
+    <!-- unhas -->
+
+    <!-- my hobby and pengalaman -->
+    <div class="container py-5">
+      <div class="text-center">
+        <h2><i><strong>Impian saya dan proses yg saya jalankan</strong></i></h2>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <!-- Card 1 -->
+        <div class="col" data-aos="fade-up">
+          <div class="card">
+            <img src="gambar/WhatsApp Image 2024-12-05 at 02.17.04.jpeg" class="card-img-top"
+              alt="Kegiatan Genpita Tahsin">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Hobi saya</strong></h5>
+              <p class="card-text"><strong>tarbiyah</strong> Hobi saya biasanya adalah berceramah dan saya sangat suka berceramah dan menasehati teman saya yg telah melakukan maksiat dan saya juga terkadang suka tampil dlm acara tertentu seperi gambar di atas (pembukaan bazar kewirausahaan).</p>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col" data-aos="fade-up" data-aos-delay="200">
+          <div class="card">
+            <img src="gambar/progammer.jfif" class="card-img-top"
+              alt="Kegiatan Genpita Tilawah">
+            <div class="card-body">
+              <h5 class="card-title"><strong>Impian karir</strong></h5>
+              <p class="card-text"><strong>Menjadi progammer di perusahaan besar</strong> Selagi mengembangkan bakat tarbiyah saya ,saya juga telah merancang untuk mengejar karir saya yaitu menjadi progammer di perusahaan besar,mefokuskan diri untuk menjadi lebih baik </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="saya" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2><strong>organisasi yg saya ikuti</strong> </h2>
+      <hr class="w-25 mx-auto mb-4">
+      <img src="gambar/WhatsApp Image 2024-11-08 at 01.19.52 (1).jpeg" class="rounded-circle img-thumbnail mb-3" width="200" alt="Syahrul Ramadhan" style="margin-right: 30px;">
+      <img src="gambar/WhatsApp Image 2024-11-08 at 01.19.52.jpeg" class="rounded-circle img-thumbnail mb-3" width="200" alt="Syahrul Ramadhan">
+      <h3><b>Osis dan Specteoom</b></h3>
+      <p class="text-muted">Leader of GENPITA | Web Developer</p>
+    </section>
+
+    <div class="row justify-content-center fs-5 text-center">
+      <div class="col-md-4" data-aos="fade-right" data-aos-deration="1000">
+        <p class="center-paragraf">OSIS Bidang 1, yang sering dikenal sebagai Bidang Keimanan dan Ketakwaan t
+          erhadap Tuhan Yang Maha Esa (Ketaqwaan), bertugas dalam meningkatkan kualitas spiritual dan keagamaan 
+          di lingkungan sekolah. Bidang ini biasanya mengelola berbagai kegiatan keagamaan seperti pengajian, 
+          peringatan hari besar agama, bimbingan rohani, serta kajian moral. Tujuan utamanya adalah membentuk 
+          karakter siswa yang beriman, bertakwa, dan memiliki moral yang baik sehingga tercipta lingkungan sekolah yang harmonis dan religius.
+        </p>
+      </div>
+      <div class="col-md-4" data-aos="fade-left" data-aos-delay="200">
+        <p class="center-paragraf">Spectroom adalah platform berbasis teknologi yang dirancang untuk menyediakan akses informasi, pengetahuan, dan eksplorasi dalam bentuk visual interaktif. Platform ini sering memadukan data ilmiah, video edukasi, dan artikel dalam satu tempat, sehingga memudahkan pengguna untuk memahami berbagai topik teknologi, sains, dan inovasi secara menarik dan terstruktur. Dengan pendekatan multimedia dan interaktif, Spectroom menjadi alat yang relevan bagi para pelajar, peneliti, dan penggemar teknologi untuk memperluas wawasan mereka tentang perkembangan terkini di berbagai bidang.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+    <!-- end -->
+
+    <!-- my kelass -->
+
+    <h1 class="text-center" style="margin-top: 70px; margin-bottom: 50px;"><strong> Smp angkatan 2022-2025</strong> </h1>
+   
+
+
+
+    <!-- logo kls 9 8 7 -->
+    <section class="text-center shadow-box" 
+    style="max-width: 600px; margin: 20px auto; padding: 30px; border-radius: 15px; background-color: #ffffff; 
+           box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);">
+    <!-- Gambar -->
+    <img src="gambar/spensa.jpg" alt="GENPITA" width="200" class="rounded-circle img-thumbnail" />
+    
+    <!-- Judul -->
+    <h2 class="display-4"><b>UPTD SMP 1 SINJAI</b></h2>
+    
+    <!-- Deskripsi -->
+    <p class="lead">
+        <b>pengalaman</b> | Sekolah Penggerak Angkatan 3
+    </p>
+    
+    <!-- Tombol -->
+    <a href="#gallery" class="btn btn-light mt-4"
+        style="font-size: 1.2rem; font-weight: bold; border-radius: 30px; padding: 10px 30px; 
+               box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); margin-bottom: 0;">
+       Momen spesial 
+    </a>
+</section>
+
+    <!-- end -->
+
+
+
+
+      <!-- smp angkatan -->
+      <header class="text-center py-4">
+        <h1 style="margin-top: 70px; font-size: 2.5rem" class="text-primary"><b>Gallery VII.2 | VIII.2 | IX.2</b></h1>
+      </header>
+  
+      <section id="gallery" class="container my-5">
+        <div class="shadow-box p-4">
+          <h2 class="text-center mb-4 text-dark">
+            <i><strong>Momen Spesial Kelas IX.2 2024</strong></i>
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" data-aos="fade-up">
+              <div class="card">
+                <img src="gambar/WhatsApp Image 2024-12-14 at 05.58.21 (2).jpeg" class="card-img-top" alt="Kegiatan Genpita Tahsin" />
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><strong>Acara Bakar-Bakar</strong></h5>
+                  <p class="card-text">Momen sulit terlupakan saat kami berkumpul, berpesta, dan menikmati ayam bakar bersama wali kelas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-delay="200">
+              <div class="card">
+                <img src="gambar/WhatsApp Image 2024-12-14 at 05.58.21.jpeg" class="card-img-top" alt="Kegiatan Genpita Tilawah" />
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><strong>P5 Proyek Kompos</strong></h5>
+                  <p class="card-text">Proyek sekolah bertema pengelolaan sampah organik dan anorganik untuk memperkuat Profil Pelajar Pancasila.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <div id="carouselExampleCaptions" class="carousel slide custom-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="kontak.html">
+              <img src="gambar/WhatsApp Image 2024-12-13 at 22.14.19.jpeg" class="d-block w-100" alt="First Slide" />
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5><b>Pembukaan Expression Week 2024 IX</b></h5>
+              <p>Foto bersama Kelas IX pada pembukaan Porseni 2024.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="#">
+              <img src="gambar/WhatsApp Image 2024-12-13 at 22.14.20.jpeg" class="d-block w-100" alt="Second Slide" />
+            </a>
+          </div>
+          <div class="carousel-item">
+            <a href="halaman3.html">
+              <img src="gambar/WhatsApp Image 2024-12-14 at 05.58.21 (2).jpeg" class="d-block w-100" alt="Third Slide" />
+            </a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5><b>Acara ucapan terimah kasih</b></h5>
+              <p>acara ucapan terimah kasih kepada wali kelas karna telah mengajar kan kami dgn penuh kesabaran</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  
+      <section class="container my-5">
+        <div class="shadow-box p-4">
+          <h2 class="text-center mb-4 text-dark">
+            <i><strong>Momen bulan puasa Kelas VIII.2 dan VII.2 </strong></i>
+          </h2>
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col" data-aos="fade-up">
+              <div class="card">
+                <img src="gambar/WhatsApp Image 2024-12-17 at 04.29.43 (1).jpeg" class="card-img-top" alt="GENPITA Tahsin" />
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><strong>Buka puasa bersama kelas  VIII.2 2024</strong></h5>
+                  <p class="card-text">buka puasa bersama di <i>Mesjid Nur Ilham Ika </i>di UPTD SMP 1 SINJAI Bersama Ibu wali kelas <br>
+                    dan merupakan momen yg tidak bisa di lupakan.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col" data-aos="fade-up" data-aos-delay="200">
+              <div class="card">
+                <img src="gambar/WhatsApp Image 2024-12-19 at 06.04.14.jpeg" class="card-img-top" alt="GENPITA Tilawah" />
+                <div class="card-body">
+                  <h5 class="card-title text-primary"><strong>Buka puasa bersama dan berbagi Takjil kelas VII.2 2023 </strong></h5>
+                  <p class="card-text">Buka puasa bersama dan berbagi takjil dan mengajar saling <mark>Untuk saling membantu dan  saling membantu</mark>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+    <!-- end angkatan smp -->
+
+
+      <!-- footer  -->
+      
+                      <!-- FOOTER -->
+                      <div class="container-fluid p-0">
+                        <footer class="text-center text-lg-start text-white" style="background-color: #4f88de; position: relative; clear: both; width: 100%; padding: 20px; margin-top: 20px;">
+                          <div class="container-fluid">
+                            <!-- Section: Links -->
+                            <section class="links">
+                              <div class="row">
+                                <!-- Eskul Genpita Section -->
+                                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                  <h3 class="text-uppercase mb-4 font-weight-bold">Syahrul ramadhan</h3>
+                                  <hr style="border: 2px black solid;">
+                                  <p style="text-align: justify;">
+                                   Aku hanya progammer pemula yg belajar HTML dan css, Dan saya Ucapkan <strong>
+                                    terimah kasih telah mengunjungi web saya </strong>
+                                  </p>
+                                </div>
+                      
+                                <hr class="w-100 clearfix d-md-none" />
+                      
+                                <!-- Products Section -->
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                  <h6 class="text-uppercase mb-4 font-weight-bold"><b>Bakat saya </b><h6>
+                                  <p class="text-white">Ceramah</p>
+                                  <p class="text-white">Bermain game mobile legeds</p>
+                                  <p class="text-white">Mengambar (opsional)</p>
+                                  <p class="text-white">Berbisnis</p>
+                                </div>
+                      
+                                <hr class="w-100 clearfix d-md-none" />
+                    
+                                <!-- Useful Links Section -->
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                                  <h6 class="text-uppercase mb-4 font-weight-bold"><b>Eskul yg saya ikuti </b></h6>
+                                  <p class="text-white">Eskul genpita</p>
+                                  <p class="text-white">Eskul Spectroom</p>
+                                  <p class="text-white">Osis (organisasi intra sekolah)</p>
+                                </div>
+                      
+                                <hr class="w-100 clearfix d-md-none" />
+                      
+                                <!-- Contact Section -->
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                                  <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                                  <p><i class="fas fa-home mr-3"></i> Sekolah ,UPTD SMP 1 SINJAI UTARA</p>
+                                  <p><i class="fas fa-envelope mr-3"></i> Genpita19200@Gmail.com</p>
+                                  <p><i class="fas fa-phone mr-3"></i> +0853 4569 4667</p>
+                                  <p><i class="fas fa-print mr-3"></i> +0876 5243 8764</p>
+                                </div>
+                              </div>
+                            </section>
+                      
+                            <hr class="my-3" />
+                      
+                            <!-- Section: Copyright -->
+                            <section class="p-3 pt-0">
+                              <div class="row d-flex align-items-center">
+                                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                                  <div class="p-3">
+                                    © 2024 Copyright:
+                                    <a href="https://mdbootstrap.com/" class="text-white">mdbootstrap.com</a>
+                                  </div>
+                                </div>
+                      
+                                <!-- Social Media Links -->
+                                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                                  <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-facebook-f"></i></a>
+                                  <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-tiktok"></i></a>
+                                  <a class="btn btn-outline-light btn-floating m-1" href="#" role="button"><i class="fab fa-google"></i></a>
+                                  <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/genpita_/profilecard/?igsh=MWZpaXY3Mmw1Mzg4Yg%3D%3D" role="button"><i class="fab fa-instagram"></i></a>
+                                </div>
+                              </div>
+                            </section>
+                          </div>
+                        </footer>
+                      </div>
+                      
+
+
+  
+      <!-- end -->
+   
+                   
+
+
+
+                        <!--AOS-->
+                        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+                        <script>
+                          feather.replace();
+                        </script>
+                        <!-- contact section end-->
+
+                        <script src="https://unpkg.com/feather-icons"></script>
+                        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                        <script>
+                          AOS.init();
+                        </script>
+
+                        <script src="https://unpkg.com/aos@next/dist/aos.js">
+                        </script>
+
+                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+                          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                          crossorigin="anonymous"></script>
+</body>
+
+</html>

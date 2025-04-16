@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarbiyah Genpita - Generasi Pencinta Al-Quran</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Scheherazade+New:wght@400;700&family=Lateef&family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <style>
+    :root {
+      --primary: #1f6357;
+      --secondary: #45b69c;
+      --accent: #d3a846;
+      --light: #f8f9fa;
+      --dark: #212529;
+      --primary-light: #2b8a79;
+      --primary-dark: #134a41;
+      --secondary-light: #5eceb7;
+      --light-gray: #e9ecef;
+      --off-white: #f5f5f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Scheherazade New', serif;
+      font-weight: 700;
+    }
+
+    .arabic-text {
+      font-family: 'Amiri', serif;
+      font-size: 1.5em;
+      line-height: 1.8;
+      direction: rtl;
+    }
+
+    .navbar {
+      background-color: var(--primary);
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .navbar-scrolled {
+      padding: 0.5rem 2rem;
+      background-color: rgba(31, 99, 87, 0.95);
+    }
+
+    .navbar-brand {
+      font-family: 'Scheherazade New', serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: var(--light) !important;
+    }
+
+    .nav-link {
+      color: var(--light) !important;
+      margin: 0 0.5rem;
+      font-weight: 500;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/800') center/cover no-repeat;
+    }
+
+    .hero-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.8;
+    }
+
+    .hero-content {
+      color: var(--light);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-secondary {
+      background-color: var(--accent);
+      border-color: var(--accent);
+      color: var(--dark);
+      padding: 0.8rem 2rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background-color: #c19835;
+      border-color: #c19835;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 3px;
+      background-color: var(--accent);
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .what-is-section {
+      padding: 5rem 0;
+      background-color: var(--off-white);
+    }
+
+    .tarbiyah-card {
+      background-color: var(--light);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .tarbiyah-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .tarbiyah-card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .tarbiyah-card-body {
+      padding: 2rem;
+    }
+
+    .tarbiyah-card-title {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .tarbiyah-card-text {
+      color: var(--dark);
+      line-height: 1.6;
+    }
+
+    .principles-section {
+      padding: 5rem 0;
+      background-color: var(--primary);
+      color: var(--light);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .principles-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+
+    .principle-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 2rem;
+      height: 100%;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s;
+    }
+
+    .principle-card:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+    }
+
+    .principle-icon {
+      font-size: 3rem;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .principle-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .principle-text {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .activities-section {
+      padding: 5rem 0;
+      background-color: var(--light);
+    }
+
+    .activity-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s;
+      height: 100%;
+      background-color: var(--light);
+    }
+
+    .activity-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .activity-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .activity-body {
+      padding: 1.5rem;
+    }
+
+    .activity-date {
+      font-size: 0.85rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .activity-title {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    .activity-text {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 1rem;
+    }
+
+   
+
+    .gallery-section {
+      padding: 5rem 0;
+      background-color: var(--primary-light);
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 15px;
+      position: relative;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: var(--light);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .gallery-subtitle {
+      font-size: 0.9rem;
+    }
+
+    .quote-section {
+      padding: 5rem 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/800') center/cover fixed no-repeat;
+      color: var(--light);
+      text-align: center;
+      position: relative;
+    }
+
+    .quote-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.1;
+    }
+
+    .quote-icon {
+      font-size: 4rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .quote-text {
+      font-size: 1.8rem;
+      font-style: italic;
+      margin-bottom: 2rem;
+      font-family: 'Lateef', serif;
+    }
+
+    .quote-author {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .contact-section {
+      padding: 5rem 0;
+      background-color: var(--off-white);
+    }
+
+    .contact-info-card {
+      background-color: var(--light);
+      border-radius: 15px;
+      padding: 2rem;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      transition: all 0.3s;
+    }
+
+    .contact-info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-title {
+      font-size: 1.3rem;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    .contact-text {
+      color: #6c757d;
+    }
+
+    .footer {
+      background-color: var(--primary-dark);
+      color: var(--light);
+      padding: 3rem 0 0;
+    }
+
+    .footer-title {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    .footer-title::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background-color: var(--accent);
+      bottom: 0;
+      left: 0;
+    }
+
+    .footer-text {
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+      padding-left: 5px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--light);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .footer-social a:hover {
+      background-color: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      background-color: rgba(0, 0, 0, 0.2);
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .footer-bottom-text {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      background-color: var(--primary);
+      color: var(--light);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+      opacity: 0;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 991.98px) {
+      .navbar-collapse {
+        background-color: var(--primary);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .principle-card,
+      .activity-card,
+      .testimonial-card,
+      .contact-info-card {
+        margin-bottom: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .quote-text {
+        font-size: 1.5rem;
+      }
+
+      .footer {
+        text-align: center;
+      }
+
+      .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+
+      .btn-hero {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Animation Classes */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .slide-up {
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .slide-right {
+      animation: slideRight 1s ease-in-out;
+    }
+
+    .slide-left {
+      animation: slideLeft 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideLeft {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-book-quran me-2"></i>
+        Tarbiyah Genpita
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="inde.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Tentang Tarbiyah</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#principles">Prinsip</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#activities">Kegiatan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#schedule">Jadwal</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galeri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Kontak</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <div class="hero-content">
+            <h1 class="hero-title fade-in">Tarbiyah Genpita</h1>
+            <p class="hero-subtitle slide-up">Menumbuhkan Generasi Pencinta Al-Quran yang Berakhlak Mulia, Cerdas, dan Bermanfaat</p>
+            <div class="d-flex justify-content-center flex-wrap">
+              <a href="#about" class="btn btn-primary me-md-3 mb-3 mb-md-0 btn-hero">Pelajari Tarbiyah</a>
+              <a href="#activities" class="btn btn-secondary btn-hero">Kegiatan Kami</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What is Tarbiyah Section -->
+  <section class="what-is-section" id="about">
+    <div class="container">
+      <h2 class="section-title">Apa itu Tarbiyah?</h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="tarbiyah-card">
+            <img src="gambar/download.jpg" alt="Tarbiyah Concept" class="tarbiyah-card-img">
+            <div class="tarbiyah-card-body">
+              <h3 class="tarbiyah-card-title">Makna Tarbiyah</h3>
+              <p class="tarbiyah-card-text">Tarbiyah berasal dari kata bahasa Arab yang berarti "pendidikan" atau "pembinaan". Dalam konteks Islam, Tarbiyah adalah proses pendidikan holistik yang mencakup pengembangan individu dari segi spiritual, intelektual, emosional, dan akhlak.</p>
+              <p class="tarbiyah-card-text">Tarbiyah tidak hanya tentang transfer ilmu, tetapi juga tentang pembinaan karakter dan pola pikir Islami yang berdasarkan Al-Quran dan Sunnah. Tujuannya adalah membentuk manusia yang memiliki hubungan kuat dengan Allah SWT, berilmu luas, berakhlak mulia, dan bermanfaat bagi masyarakat.</p>
+              <p class="arabic-text my-4 text-center">
+                وَقُلْ رَبِّ زِدْنِي عِلْمًا
+              </p>
+              <p class="text-center"><em>"Dan katakanlah (Muhammad), 'Ya Tuhanku, tambahkanlah ilmu kepadaku.'"</em> (QS. Thaha: 114)</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="tarbiyah-card">
+            <img src="gambar/tarbiyah.png" alt="Tarbiyah Goals" class="tarbiyah-card-img">
+            <div class="tarbiyah-card-body">
+              <h3 class="tarbiyah-card-title">Tujuan Tarbiyah</h3>
+              <p class="tarbiyah-card-text">Tarbiyah dalam Eskul GENPITA bertujuan untuk:</p>
+              <ul class="tarbiyah-card-text">
+                <li>Membentuk pemahaman yang benar tentang Islam berdasarkan Al-Quran dan Sunnah.</li>
+                <li>Mengembangkan kecintaan terhadap Al-Quran dan mempraktikkannya dalam kehidupan sehari-hari.</li>
+                <li>Membentuk karakter dan akhlak mulia berdasarkan nilai-nilai Islam.</li>
+                <li>Menumbuhkan rasa tanggung jawab terhadap diri sendiri, keluarga, dan masyarakat.</li>
+                <li>Membekali siswa dengan keterampilan dakwah dan leadership yang dilandasi nilai Islam.</li>
+              </ul>
+              <div class="d-flex justify-content-center mt-4">
+                <a href="#principles" class="btn btn-primary">Prinsip Tarbiyah</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">Testimoni Anggota GENPITA</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="testimonial-card text-center">
+            <p class="testimonial-text">
+              "Bergabung dengan program Tarbiyah GENPITA membuat saya lebih memahami Islam dengan benar dan membuat saya lebih dekat dengan Al-Quran. Alhamdulillah, sekarang saya sudah bisa menghafal beberapa juz Al-Quran dan lebih konsisten dalam ibadah."
+            </p>
+            <h4 class="testimonial-name">Muh Faiz nur syahrum</h4>
+            <p class="testimonial-role">Kelas IX.7, Anggota 2 Tahun</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="testimonial-card text-center">
+            <p class="testimonial-text">
+              "Tarbiyah GENPITA mengubah cara pandang saya terhadap hidup. Dulu saya sering merasa cemas dan tidak tenang, tapi setelah belajar memahami Islam dengan benar melalui tarbiyah, hati saya jadi lebih tenang dan saya merasa hidup lebih bermakna."
+            </p>
+            <h4 class="testimonial-name">Annisa Fatimah Azzahara</h4>
+            <p class="testimonial-role">Kelas XI.1, Anggota 1 Tahun</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="testimonial-card text-center">
+            <p class="testimonial-text">
+              "Saya awalnya ikut GENPITA karena ajakan teman, tapi sekarang saya jadi sangat mencintai kegiatan ini. Tarbiyah membuat saya lebih memahami tujuan hidup saya sebagai muslim dan memberikan saya lingkungan yang mendukung untuk menjadi pribadi yang lebih baik."
+            </p>
+            <h4 class="testimonial-name">Naila syakirah</h4>
+            <p class="testimonial-role">Kelas XI.3, Anggota 2 tahun</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <h2 class="section-title text-white">Galeri Kegiatan</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="gambar/WhatsApp Image 2025-01-09 at 01.26.12.jpeg" alt="Gallery 1" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Kajian Tarbiyah Mingguan</h3>
+              <p class="gallery-subtitle">Bersama Bapak Surdirman, S.Ag, M.Pd.I</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="gambar/WhatsApp Image 2025-01-09 at 01.26.13.jpeg" alt="Gallery 2" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Halaqah Al-Quran</h3>
+              <p class="gallery-subtitle">Memahami dan Mengamalkan Al-Quran</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="gambar/WhatsApp Image 2025-01-09 at 01.26.14.jpeg" alt="Gallery 3" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">ceramah Genpita</h3>
+              <p class="gallery-subtitle">Bersama ketua Genpita,syahrul ramdhan </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="gambar/WhatsApp Image 2025-01-01 at 01.17.04 (1).jpeg" alt="Gallery 4" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Tarbiyah Bersama Guru</h3>
+              <p class="gallery-subtitle">Pembinaan Karakter Islami</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="gambar/WhatsApp Image 2024-12-06 at 01.09.17.jpeg" alt="Gallery 5" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Genpita Tarbiyah</h3>
+              <p class="gallery-subtitle text-center">pembukaan Event P5 yg bertema "Umat yg paling baik" </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="gallery-item">
+            <img src="gambar/WhatsApp Image 2025-01-09 at 01.26.14 (1).jpeg" alt="Gallery 6" class="gallery-img">
+            <div class="gallery-overlay">
+              <h3 class="gallery-title">Tarbiya Genpita</h3>
+              <p class="gallery-subtitle text-center">tarbiyah bersama semua Guru Pembina eskul Genpita</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section">
+    <div class="quote-pattern"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="quote-text">
+            "Siapa yang menempuh jalan untuk mencari ilmu, maka Allah akan mudahkan baginya jalan menuju surga."
+          </p>
+          <p class="quote-author">
+            HR. Muslim
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title">Hubungi Kami</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h3 class="contact-title">Lokasi</h3>
+            <p class="contact-text">UPTD SMP 1 SINJAI UTARA</p>
+            <p class="contact-text">Jl. Persatuan Raya, Sinjai Utara</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 class="contact-title">Email</h3>
+            <p class="contact-text">Genpita19200@Gmail.com</p>
+            <p class="contact-text">info.genpita@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3 class="contact-title">Telepon</h3>
+            <p class="contact-text">+0853 4569 4667</p>
+            <p class="contact-text">+0876 5243 8764</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+
+                      <!-- footer -->
+                      <footer class="bg-success text-white pt-5 pb-4">
+                        <div class="container">
+                          <div class="row align-items-start">
+                            
+                            <!-- Logo dan Deskripsi -->
+                            <div class="col-md-4 mb-4">
+                              <img src="gambar/logi trbiyah.png"Logo Tarbiyah" width="70" class="mb-2">
+                              <h5 class="fw-bold mt-2">Tarbiyah Islamiyah</h5>
+                              <p class="text-light small">Membina karakter islami, memperkuat iman, dan menumbuhkan semangat belajar dalam cahaya Al-Qur'an dan Sunnah.</p>
+                            </div>
+                      
+                            <!-- Navigasi -->
+                            <div class="col-md-4 mb-4">
+                              <h6 class="fw-semibold">Navigasi</h6>
+                              <ul class="list-unstyled">
+                                <li><a href="#" class="text-white text-decoration-none">Beranda</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Visi Misi</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Program Tarbiyah</a></li>
+                                <li><a href="#" class="text-white text-decoration-none">Kontak Kami</a></li>
+                              </ul>
+                            </div>
+                      
+                            <!-- Kontak & Sosial Media -->
+                            <div class="col-md-4 mb-4">
+                              <h6 class="fw-semibold">Hubungi Kami</h6>
+                              <p class="mb-1"><i class="fas fa-envelope me-2"></i>tarbiyah@genpita.id</p>
+                              <p><i class="fas fa-phone me-2"></i>+62 812-3456-7890</p>
+                              <div>
+                                <a href="#" class="text-white me-3"><i class="fab fa-instagram fs-4"></i></a>
+                                <a href="#" class="text-white me-3"><i class="fab fa-facebook fs-4"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-youtube fs-4"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                      
+                          <hr class="border-light">
+                      
+                          <!-- Footer bawah -->
+                          <div class="text-center text-light small">
+                            &copy; 2025 Tarbiyah Islamiyah. Seluruh hak cipta dilindungi.
+                          </div>
+                        </div>
+                      </footer>
+                      
+                      <!-- emd footer -->
+  </body>
+ </html>
+                    

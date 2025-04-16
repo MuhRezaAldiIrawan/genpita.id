@@ -1,0 +1,376 @@
+.jumbotron {
+  padding-top: 2rem;
+  background-color: #13d40c;
+}
+
+/* hero section strat */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/* hero section end */
+
+/* Reset default margin dan padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling untuk body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-top: 150px;
+}
+
+/* Layout Galeri */
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Gaya untuk tiap item gambar */
+.image-item {
+  margin-top: 20px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 35%; /* Membuat kotak lebih besar */
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  max-width: 400px; /* Memperbesar ukuran gambar */
+}
+
+/* Deskripsi gambar */
+.description {
+  font-size: 1.2rem; /* Membuat ukuran teks deskripsi lebih besar */
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Efek hover untuk item gambar */
+.image-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsif untuk layar lebih kecil */
+@media screen and (max-width: 768px) {
+  .image-item {
+    width: 45%; /* Membuat kotak lebih besar di layar tablet */
+  }
+  .image-item img {
+    max-width: 80%; /* Mengatur gambar tetap responsif */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-item {
+    width: 90%; /* Mengatur kotak satu kolom untuk layar ponsel */
+  }
+  .image-item img {
+    max-width: 100%; /* Gambar akan menyesuaikan dengan layar ponsel */
+  }
+}
+
+.images {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.images:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Container utama progress */
+.progress {
+  position: relative;
+  margin-top: 10px;
+  width: 75%;
+  height: 25px;
+  background: #f0f0f0;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.spectroom-paragraf {
+  text-align: justify;
+}
+
+/* Progress bar */
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #ff7700);
+  width: 75%; /* Sesuaikan dengan nilai progress */
+  border-radius: 15px 0 0 15px;
+  animation: progressAnimation 2s ease-in-out;
+}
+.progress-bar-2 {
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #ff7700);
+  width: 75%; /* Sesuaikan dengan nilai progress */
+  border-radius: 15px 0 0 15px;
+  animation: progressAnimation 2s ease-in-out;
+}
+
+.progress-bar-3 {
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #ff7700);
+  width: 75%; /* Sesuaikan dengan nilai progress */
+  border-radius: 15px 0 0 15px;
+  animation: progressAnimation 2s ease-in-out;
+}
+
+.progress-bar-4 {
+  height: 100%;
+  background: linear-gradient(90deg, #ff0000, #ff7700);
+  width: 75%; /* Sesuaikan dengan nilai progress */
+  border-radius: 15px 0 0 15px;
+  animation: progressAnimation 2s ease-in-out;
+}
+
+/* Animasi bergelombang */
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 75%;
+  }
+}
+
+/* Garis-garis bergerak */
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 75%;
+  background: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) 10px, rgba(255, 255, 255, 0.1) 10px, rgba(255, 255, 255, 0.1) 20px);
+  animation: stripeAnimation 1s linear infinite;
+}
+
+/* Animasi garis */
+@keyframes stripeAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+/* Label progress */
+.progress-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Container utama progress */
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.hero {
+  background: linear-gradient(to right, #0066cc, #004d99);
+}
+
+#about img {
+  transition: transform 0.3s;
+}
+
+#about img:hover {
+  transform: scale(1.1);
+}
+
+hr {
+  border: 2px solid #004d99;
+}
+
+.btn-light:hover {
+  background-color: #ffffff;
+  color: #3498db;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.wave {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.wave-path {
+  fill: url();
+}
+
+svg {
+  display: block;
+}
+
+/* Definisikan gradien menggunakan CSS */
+.wave svg {
+  background: linear-gradient(to right, #3498db, #9b59b6);
+}
+
+.center-paragraf {
+  text-align: justify;
+}
+
+/* Overlay untuk loading */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  display: none; /* Awalnya tersembunyi */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid #3498db;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animasi Spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Teks loading */
+#loading-overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.custom-carousel {
+  width: 60%; /* Membatasi lebar carousel */
+  margin: 0 auto; /* Memusatkan carousel */
+  border-radius: 15px; /* Memberikan sudut melengkung */
+  overflow: hidden; /* Menjaga gambar tetap dalam area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Warna kontrol lebih gelap */
+  border-radius: 50%; /* Membuat kontrol berbentuk lingkaran */
+  padding: 10px;
+}
+
+/* Styling teks */
+.typing-effect {
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black; /* Efek kursor */
+  animation: typing 1s steps(30, end), blink-cursor 0.5s step-end infinite;
+}
+
+/* Animasi ketikan */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Animasi kursor berkedip */
+@keyframes blink-cursor {
+  from {
+    border-right-color: black;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+.shadow-box {
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+.card-body {
+  text-align: center;
+}
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+.custom-carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+}

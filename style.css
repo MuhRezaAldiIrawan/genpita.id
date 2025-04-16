@@ -1,0 +1,1970 @@
+body {
+  /* min-height: 200000px; */
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.jumbotron {
+  padding-top: 2rem;
+  background-color: #13d40c;
+  background-image: url("gambar/bakground.jpg");
+}
+
+.navbar-nav {
+  margin-left: 0;
+}
+
+/* hero section strat */
+
+.detel {
+  margin-left: 15%;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  margin-right: 15%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.8); /* Warna transparan putih */
+  border: 2px solid #0f4c75; /* Border dengan warna serasi */
+  border-radius: 15px; /* Sudut membulat */
+  padding: 20px; /* Memberikan ruang di dalam elemen */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+  transform: scale(1); /* Efek ukuran awal */
+  transition: all 0.3s ease-in-out; /* Animasi untuk efek hover */
+  background-image: url(gambar/);
+}
+
+.detel:hover {
+  transform: scale(1.05); /* Memperbesar sedikit saat hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Meningkatkan bayangan */
+  background-image: url(gambar/vanca.png); /* Efek gradasi saat hover */
+}
+
+.detel h1 {
+  color: red;
+  font-style: italic;
+}
+
+.detel h5 {
+  font-style: italic;
+  color: gold;
+}
+
+.images {
+  background-repeat: no-repeat;
+  background-position: right center; /* Gambar di kanan */
+  padding-right: 50px; /* Memberi ruang agar teks tidak menutupi gambar */
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.card-title {
+  color: #007bff; /* Warna biru pada judul kartu */
+}
+.card-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+h2 {
+  color: #343a40; /* Warna teks heading */
+  margin-bottom: 30px;
+}
+
+.center-paragraf {
+  text-align: justify;
+}
+
+.custom-carousel {
+  width: 80%; /* Membatasi lebar carousel */
+  margin: 0 auto; /* Memusatkan carousel */
+  border-radius: 15px; /* Memberikan sudut melengkung */
+  overflow: hidden; /* Menjaga gambar tetap dalam area */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan halus */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Warna kontrol lebih gelap */
+  border-radius: 50%; /* Membuat kontrol berbentuk lingkaran */
+  padding: 10px;
+}
+
+/* footer */
+.bg-light-green {
+  background-color: #a8e6cf;
+}
+
+footer a:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* end */
+footer {
+  background-color: #343a40; /* Bisa diubah sesuai selera */
+  color: rgb(51, 199, 21);
+  width: 100%; /* Pastikan lebar penuh */
+  position: relative;
+  left: 0;
+  bottom: 0;
+}
+
+.container-fluid {
+  padding: 0; /* Hilangkan padding bawaan agar benar-benar penuh */
+}
+
+.animated-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Gambar tetap */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  position: relative;
+  border: none;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-text-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.animated-card.active {
+  transform: scale(1.1);
+  transition: transform 0.5s ease;
+}
+
+.link-card {
+  text-decoration: none;
+}
+
+.content {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 20px auto;
+  margin-top: 108px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Reset dan gaya dasar */
+header.hero-section {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.prestasi-section,
+.berita-section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #4e54c8;
+}
+
+.prestasi-grid,
+.berita-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.prestasi-item,
+.berita-item {
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.prestasi-item:hover,
+.berita-item:hover {
+  transform: translateY(-10px);
+}
+
+.prestasi-item img,
+.berita-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.prestasi-item h3,
+.berita-item h3 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.prestasi-item p,
+.berita-item p {
+  font-size: 1rem;
+  margin: 10px;
+  color: #666;
+}
+
+.berita-item a {
+  display: block;
+  text-align: center;
+  background: #4e54c8;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* LOADING */
+/* Overlay untuk loading */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 9999;
+  display: none; /* Awalnya tersembunyi */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Spinner */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid #3498db;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Animasi Spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Teks loading */
+#loading-overlay p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+}
+.custom-carousel .carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Root container untuk isolasi elemen */
+.portfolio-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f4f4f4, #e0f7fa);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container untuk kotak */
+.portfolio-section .card-container {
+  display: flex;
+  flex-wrap: wrap; /* Kotak bisa pindah baris jika ruang tidak cukup */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Gaya untuk setiap kotak */
+.portfolio-section .card {
+  width: 200px;
+  height: 250px;
+  background: linear-gradient(135deg, #ff512f, #f09819);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+}
+
+.portfolio-section .card i {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.portfolio-section .card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.portfolio-section .card button {
+  background-color: #ffffff;
+  color: #ff512f;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.portfolio-section .card button:hover {
+  background-color: #ff512f;
+  color: white;
+}
+
+/* Variasi warna untuk kotak */
+.portfolio-section .card:nth-child(2) {
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+
+.portfolio-section .card:nth-child(3) {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.portfolio-section .card:nth-child(4) {
+  background: linear-gradient(135deg, #ffaf7b, #d76d77);
+}
+
+/* Container utama */
+.portfolio-grid {
+  margin-top: 40px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.grid-item i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.grid-item h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.grid-item p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Animasi interaktif */
+.grid-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(0);
+  transition: transform 0.5s ease-in-out;
+  border-radius: 15px;
+}
+
+.grid-item:hover::before {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    padding: 15px;
+  }
+
+  .grid-item i {
+    font-size: 40px;
+  }
+
+  .grid-item h3 {
+    font-size: 20px;
+  }
+
+  .grid-item p {
+    font-size: 14px;
+  }
+}
+
+.quiz-container {
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.quiz-header h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.question-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.answers button {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+.answers button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #e0f7fa;
+}
+
+header {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to right, #42a5f5, #26c6da);
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+main {
+  margin-bottom: 70px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.image-container {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.image-container img:hover {
+  transform: scale(1.1);
+}
+.text-container {
+  flex: 2 1 400px;
+  padding: 20px;
+}
+.text-container h2 {
+  font-size: 28px;
+  color: #42a5f5;
+  margin-bottom: 10px;
+}
+.text-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+.text-container strong {
+  color: #26c6da;
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+.highlight-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #e3e2e2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.highlight-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #74c69d;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+}
+
+.highlight-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #388e3c;
+}
+
+.highlight-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.highlight-content p.ayat {
+  font-style: italic;
+  color: #388e3c;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .highlight-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .highlight-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+p {
+  font-size: 1.2em;
+  color: #666;
+}
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.feature-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.feature-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.feature-card h3 {
+  font-size: 1.5em;
+  margin: 15px 0;
+}
+.feature-card p {
+  font-size: 1em;
+  color: #666;
+}
+.buttons {
+  margin-top: 20px;
+}
+.buttons a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1em;
+  margin: 0 10px;
+}
+@media (max-width: 768px) {
+  .feature-card {
+    width: 100%;
+  }
+}
+
+.pcards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pcard-wrapper {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pcard-container {
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.pcard-container:hover {
+  transform: translateY(-5px);
+}
+
+.pcard-cover {
+  height: 160px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  position: relative;
+}
+
+.pcard-cover.blue {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+.pcard-cover.green {
+  background: linear-gradient(135deg, #10b981, #047857);
+}
+.pcard-cover.orange {
+  background: linear-gradient(135deg, #f97316, #c2410c);
+}
+.pcard-cover.pink {
+  background: linear-gradient(135deg, #ec4899, #be185d);
+}
+.pcard-cover.red {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+}
+
+.pcard-profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 5px;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.pcard-profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pcard-content {
+  padding: 70px 20px 20px;
+  text-align: center;
+}
+
+.pcard-name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.pcard-role {
+  color: #6366f1;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.pcard-desc {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.pcard-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.pcard-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  background: #f1f5f9;
+}
+
+.pcard-social-icon i {
+  font-size: 18px;
+}
+
+.pcard-social-icon.whatsapp {
+  color: #25d366;
+}
+.pcard-social-icon.facebook {
+  color: #1877f2;
+}
+.pcard-social-icon.twitter {
+  color: #1da1f2;
+}
+
+.pcard-social-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* Contact Section Styles */ .contact-section {
+  padding: 80px 0;
+  background-color: #f9f9f9;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background-color: #13d40c;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(19, 212, 12, 0.4);
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin-bottom: 30px;
+  font-size: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.contact-item .icon {
+  min-width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.contact-item .text h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: white;
+  color: #13d40c;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.input-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  border-bottom: 2px solid #ddd;
+  outline: none;
+  resize: none;
+  background: transparent;
+}
+
+.input-box textarea {
+  min-height: 120px;
+}
+
+.input-box span {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  font-size: 1rem;
+  color: #999;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ span,
+.input-box textarea:focus ~ span,
+.input-box input:valid ~ span,
+.input-box textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 0.9rem;
+  color: #13d40c;
+}
+
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box input:valid,
+.input-box textarea:valid {
+  border-bottom: 2px solid #13d40c;
+}
+
+.submit-btn {
+  background-color: #13d40c;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0fa308;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(19, 212, 12, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+  }
+}
+
+.islamic-motivation-card {
+  max-width: 600px;
+  background: linear-gradient(135deg, #edf7ed 0%, #e0f0e0 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+  border: 1px solid rgba(46, 125, 50, 0.15);
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.islamic-pattern {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 10a5 5 0 1 1 0-10 5 5 0 0 1 0 10z' fill='%232e7d32' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+  opacity: 0.6;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.quran-icon {
+  color: #2e7d32;
+  margin-right: 15px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #1b5e20;
+  margin: 0;
+  font-weight: 600;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, #2e7d32, #81c784);
+  border-radius: 3px;
+}
+
+.quote-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quote-start, .quote-end {
+  flex-shrink: 0;
+  color: #2e7d32;
+  opacity: 0.7;
+}
+
+.quote-start {
+  margin-top: 4px;
+}
+
+.quote-end {
+  align-self: flex-end;
+  margin-bottom: -10px;
+}
+
+.quote-text {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #2e3d32;
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.arabic-decoration {
+  text-align: center;
+  font-size: 2.5rem;
+  color: rgba(46, 125, 50, 0.2);
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+/* === Gaya Islami Modern === */
+.about-section {
+  background: url('https://www.transparenttextures.com/patterns/arabesque.png'), 
+              linear-gradient(to right, #f8f5ee, #e8f5e9);
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png') repeat;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.islamic-frame {
+  position: relative;
+  border: 15px solid transparent;
+  border-image: url('https://www.transparenttextures.com/patterns/arabic-border.png') 30 round;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0, 80, 0, 0.1);
+}
+
+.islamic-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.islamic-frame:hover img {
+  transform: scale(1.03);
+}
+
+.arabic-pattern-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.islamic-content-box {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 100, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.islamic-content-box::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background: url('https://www.transparenttextures.com/patterns/islamic-pattern.png');
+  opacity: 0.05;
+}
+
+.section-title {
+  color: #2e7d32;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 2.2rem;
+}
+
+.arabic-decoration {
+  color: #d4af37;
+  font-size: 1.8rem;
+  margin: 0 10px;
+}
+
+.ayat-decoration {
+  background: rgba(46, 125, 50, 0.1);
+  border-right: 4px solid #d4af37;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.arabic-ayat {
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+  font-size: 1.8rem;
+  text-align: right;
+  color: #2e7d32;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.translation {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.surah-reference {
+  color: #d4af37;
+  font-weight: 500;
+  text-align: right;
+}
+
+.program-list {
+  margin-top: 2rem;
+}
+
+.program-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.program-item:hover {
+  background: rgba(46, 125, 50, 0.05);
+  transform: translateX(5px);
+}
+
+.program-item i {
+  font-size: 1.8rem;
+  color: #d4af37;
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+.program-item h4 {
+  color: #2e7d32;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.program-item p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .islamic-frame {
+    margin-bottom: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .arabic-ayat {
+    font-size: 1.5rem;
+  }
+}
+
+/* Jumbotron Islami */
+.jumbotron-islami {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 80, 0, 0.7), rgba(0, 60, 0, 0.8)), 
+              url('https://www.transparenttextures.com/patterns/arabesque.png');
+  color: white;
+  overflow: hidden;
+  padding-bottom: 120px;
+}
+
+.jumbotron-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/green-dust-and-scratches.png');
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.jumbotron-content {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.islamic-medallion {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 2rem;
+}
+
+.islamic-medallion img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.islamic-medallion:hover img {
+  transform: scale(1.05);
+}
+
+.medallion-border {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 2px dashed rgba(212, 175, 55, 0.5);
+  border-radius: 50%;
+  animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  margin-top: 100px;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+  padding: 0 50px;
+}
+
+.arabic-decoration {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  color: rgba(212, 175, 55, 0.7);
+}
+
+.arabic-decoration.right {
+  right: 0;
+}
+
+.arabic-decoration.left {
+  left: 0;
+}
+
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.badge {
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.bg-gold {
+  background: linear-gradient(135deg, #d4af37, #f9d423);
+  color: #2e7d32;
+}
+
+.bg-green {
+  background: rgba(46, 125, 50, 0.9);
+  color: white;
+}
+
+.divider {
+  color: rgba(212, 175, 55, 0.7);
+  font-weight: bold;
+}
+
+.ayat-scroll {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 2rem auto 0;
+  border-top: 3px solid #d4af37;
+}
+
+.arabic {
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.translation {
+  font-style: italic;
+  margin-bottom: 0.3rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.surah {
+  color: #d4af37;
+  font-weight: 500;
+}
+
+.wave-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.wave-shape svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+    padding: 0 40px;
+  }
+  
+  .arabic-decoration {
+    font-size: 1.8rem;
+  }
+  
+  .islamic-medallion {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .arabic {
+    font-size: 1.5rem;
+  }
+}
+
+.bismillah {
+  font-family: 'Traditional Arabic', 'Amiri', 'Lateef', serif;
+  font-size: 2.8rem;
+  color: #d4af37;
+  display: inline-block;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0 15px;
+  position: relative;
+  transform: translateY(5px);
+}
+
+/* Untuk efek kaligrafi */
+.bismillah::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #d4af37, transparent);
+  opacity: 0.7;
+}
+
+/* Animasi cahaya */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+  50% { text-shadow: 0 0 15px rgba(212, 175, 55, 0.8); }
+  100% { text-shadow: 0 0 5px rgba(212, 175, 55, 0.5); }
+}
+
+.bismillah:hover {
+  animation: glow 2s infinite;
+}
+
+/* Islamic Highlight Container */
+.islamic-highlight-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 20px;
+}
+
+/* Islamic Card Design */
+.islamic-highlight-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #d4af37;
+}
+
+.islamic-highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(46, 125, 50, 0.15);
+}
+
+/* Islamic Badge */
+.islamic-badge {
+  position: absolute;
+  left: -25px;
+  top: 20px;
+  width: 50px;
+  height: 50px;
+  background: #2e7d32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.arabic-number {
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+  font-size: 1.8rem;
+  color: white;
+  font-weight: bold;
+  position: relative;
+}
+
+.circle-decoration {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px dashed rgba(212, 175, 55, 0.5);
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+/* Card Content */
+.islamic-card-content {
+  padding: 2rem 2rem 2rem 3rem;
+}
+
+.islamic-card-title {
+  color: #2e7d32;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.islamic-card-title i {
+  color: #d4af37;
+  font-size: 1.3rem;
+}
+
+.islamic-card-body {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+/* List Style */
+.islamic-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.islamic-list li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.islamic-list i {
+  color: #2e7d32;
+}
+
+/* Benefit Grid */
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.benefit-item {
+  background: rgba(46, 125, 50, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(46, 125, 50, 0.2);
+  transform: translateY(-3px);
+}
+
+.benefit-item i {
+  font-size: 1.8rem;
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.benefit-item span {
+  font-weight: 500;
+  color: #2e7d32;
+}
+
+/* Lesson Features */
+.lesson-features {
+  margin: 1.5rem 0;
+}
+
+.feature {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 1.2rem;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  background: rgba(212, 175, 55, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-icon i {
+  color: #d4af37;
+  font-size: 1.3rem;
+}
+
+.feature-text h4 {
+  color: #2e7d32;
+  margin-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.feature-text p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Islamic Quote */
+.islamic-quote {
+  background: rgba(46, 125, 50, 0.05);
+  border-right: 4px solid #d4af37;
+  padding: 1.2rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 1.5rem;
+}
+
+.arabic-ayat {
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+  font-size: 1.5rem;
+  text-align: right;
+  color: #2e7d32;
+  line-height: 1.8;
+  margin-bottom: 0.5rem;
+}
+
+.islamic-quote p {
+  color: #555;
+  font-style: italic;
+  text-align: right;
+}
+
+/* Animations */
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .islamic-badge {
+    left: -20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .arabic-number {
+    font-size: 1.5rem;
+  }
+  
+  .islamic-card-content {
+    padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+  }
+  
+  .arabic-ayat {
+    font-size: 1.3rem;
+  }
+}
+
+/* Islamic Gallery Section */
+.islamic-gallery-section {
+  position: relative;
+  background: url('https://www.transparenttextures.com/patterns/cream-paper.png'), #f8f9fa;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* Section Header */
+.section-header {
+  position: relative;
+  z-index: 2;
+}
+
+.islamic-header-decoration {
+  position: relative;
+  height: 80px;
+  margin-bottom: 1.5rem;
+}
+
+.islamic-pattern {
+  width: 100%;
+  height: 100%;
+}
+
+.arabic-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #d4af37;
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, #d4af37, #2e7d32, #d4af37);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Gallery Grid */
+.islamic-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.islamic-gallery-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  border-top: 5px solid #d4af37;
+}
+
+.islamic-gallery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(46, 125, 50, 0.2);
+}
+
+/* Card Image */
+.card-image-container {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.card-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.islamic-gallery-card:hover .card-image-container img {
+  transform: scale(1.1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(46, 125, 50, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.islamic-gallery-card:hover .image-overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+  color: white;
+}
+
+.overlay-content i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.overlay-content span {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Card Content */
+.card-content {
+  padding: 2rem 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.islamic-badge {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #d4af37, #f9d423);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.islamic-badge i {
+  color: white;
+  font-size: 1.3rem;
+}
+
+.card-content h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  font-weight: 600;
+}
+
+.card-content p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.arabic-decoration {
+  font-family: 'Traditional Arabic', 'Amiri', serif;
+  font-size: 1.5rem;
+  color: rgba(46, 125, 50, 0.3);
+  line-height: 1;
+}
+
+/* Islamic Pattern Divider */
+.islamic-pattern-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+}
+
+.islamic-pattern-divider svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .arabic-icon {
+    font-size: 2.5rem;
+  }
+  
+  .islamic-gallery-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .card-image-container {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .islamic-gallery-section {
+    padding: 3rem 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+

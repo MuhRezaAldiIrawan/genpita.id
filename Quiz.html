@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kuis Al-Qur'an</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(135deg, #283e51, #4b79a1);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .quiz-container {
+        background: #ffffff;
+        color: #333;
+        border-radius: 15px;
+        padding: 20px 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        width: 90%;
+        max-width: 800px;
+      }
+
+      .quiz-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .quiz-header h1 {
+        margin: 0;
+        font-size: 2rem;
+        color: #4b79a1;
+      }
+
+      .quiz-question {
+        margin: 15px 0;
+      }
+
+      .quiz-question h2 {
+        font-size: 1.1rem;
+        color: #283e51;
+      }
+
+      .quiz-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .quiz-options label {
+        background: #e8eaf6;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #c5cae9;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      .quiz-options label:hover {
+        background: #c5cae9;
+        transform: scale(1.02);
+      }
+
+      .quiz-options input[type="radio"] {
+        display: none;
+      }
+
+      .quiz-options input[type="radio"]:checked + label {
+        background: #283e51;
+        color: #fff;
+        border-color: #283e51;
+      }
+
+      .submit-btn {
+        background: #4b79a1;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        transition: background 0.3s;
+      }
+
+      .submit-btn:hover {
+        background: #283e51;
+      }
+
+      .result {
+        text-align: center;
+        margin-top: 20px;
+        padding: 15px;
+        background: #e8eaf6;
+        border-radius: 10px;
+        color: #283e51;
+        display: none;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, #1e3c72, #2a5298);
+        color: white;
+        overflow-x: hidden;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      header nav ul {
+        list-style: none;
+        margin-right: 20px;
+        display: flex;
+        gap: 15px;
+
+        padding: 0;
+      }
+
+      header nav ul li a {
+        color: white;
+
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      header nav ul li a:hover {
+        color: #fdbb2d;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Quizz Islam Genpita</h1>
+      <nav>
+        <ul>
+          <li><a href="inde.html">Home</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="quiz-container">
+      <div class="quiz-header">
+        <h1>Kuis Al-Qur'an</h1>
+        <p>
+          Jawablah 10 pertanyaan berikut dengan benar. <br />
+          <i>selasai mengerjakan soal tekan tombol HOME untuk kembali ke halaman utamaka <br />Dan terimah kasih telah mengerjakan soal ini :)) </i>
+        </p>
+      </div>
+
+      <form id="quiz-form">
+        <div class="quiz-question">
+          <h2>1. Berapa jumlah surat dalam Al-Qur'an?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q1a" name="q1" value="a" />
+            <label for="q1a">114</label>
+            <input type="radio" id="q1b" name="q1" value="b" />
+            <label for="q1b">113</label>
+            <input type="radio" id="q1c" name="q1" value="c" />
+            <label for="q1c">115</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>2. Surat apa yang pertama kali diturunkan?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q2a" name="q2" value="a" />
+            <label for="q2a">Al-Fatihah</label>
+            <input type="radio" id="q2b" name="q2" value="b" />
+            <label for="q2b">Al-Baqarah</label>
+            <input type="radio" id="q2c" name="q2" value="c" />
+            <label for="q2c">Al-'Alaq</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>3. Surat apa yang memiliki nama hewan?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q3a" name="q3" value="a" />
+            <label for="q3a">An-Naml</label>
+            <input type="radio" id="q3b" name="q3" value="b" />
+            <label for="q3b">An-Nisa</label>
+            <input type="radio" id="q3c" name="q3" value="c" />
+            <label for="q3c">Al-Fil</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>4. Berapa jumlah juz dalam Al-Qur'an?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q4a" name="q4" value="a" />
+            <label for="q4a">30</label>
+            <input type="radio" id="q4b" name="q4" value="b" />
+            <label for="q4b">29</label>
+            <input type="radio" id="q4c" name="q4" value="c" />
+            <label for="q4c">31</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>5. Siapakah nabi yang menerima wahyu Al-Qur'an?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q5a" name="q5" value="a" />
+            <label for="q5a">Nabi Musa</label>
+            <input type="radio" id="q5b" name="q5" value="b" />
+            <label for="q5b">Nabi Isa</label>
+            <input type="radio" id="q5c" name="q5" value="c" />
+            <label for="q5c">Nabi Muhammad</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>6. Apa nama surat terpanjang dalam Al-Qur'an?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q6a" name="q6" value="a" />
+            <label for="q6a">Al-Baqarah</label>
+            <input type="radio" id="q6b" name="q6" value="b" />
+            <label for="q6b">Ali Imran</label>
+            <input type="radio" id="q6c" name="q6" value="c" />
+            <label for="q6c">An-Nisa</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>7. Apa nama surat yang berarti "sapi betina"?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q7a" name="q7" value="a" />
+            <label for="q7a">An-Nahl</label>
+            <input type="radio" id="q7b" name="q7" value="b" />
+            <label for="q7b">Al-Baqarah</label>
+            <input type="radio" id="q7c" name="q7" value="c" />
+            <label for="q7c">Al-Ankabut</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>8. Berapa jumlah ayat dalam Al-Qur'an?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q8a" name="q8" value="a" />
+            <label for="q8a">6236</label>
+            <input type="radio" id="q8b" name="q8" value="b" />
+            <label for="q8b">6300</label>
+            <input type="radio" id="q8c" name="q8" value="c" />
+            <label for="q8c">6000</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>9. Pertanyaan bonus: \"Mengapa orang pacaran sangat sulit dinasehati?\"</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q9a" name="q9" value="a" />
+            <label for="q9a">karna dia merasa benar</label>
+            <input type="radio" id="q9b" name="q9" value="b" />
+            <label for="q9b">karna tak punya akal</label>
+            <input type="radio" id="q9c" name="q9" value="c" />
+            <label for="q9c">karna hati nya hitam di sebabkan oleh dosanya</label>
+          </div>
+        </div>
+
+        <div class="quiz-question">
+          <h2>10. Jika kau mati besok, apa yang kau lakukan hari ini?</h2>
+          <div class="quiz-options">
+            <input type="radio" id="q10a" name="q10" value="a" />
+            <label for="q10a">beribadah</label>
+            <input type="radio" id="q10b" name="q10" value="b" />
+            <label for="q10b">taubat</label>
+            <input type="radio" id="q10c" name="q10" value="c" />
+            <label for="q10c">hanya Allah SWT yang tahu</label>
+          </div>
+        </div>
+
+        <!-- Tambahkan pertanyaan lainnya hingga nomor 20 -->
+
+        <button type="button" class="submit-btn" onclick="checkAnswers()">Kirim Jawaban</button>
+      </form>
+
+      <div id="result" class="result"></div>
+    </div>
+
+    <script>
+      const correctAnswers = {
+        q1: "a",
+        q2: "c",
+        q3: "c",
+        q4: "a",
+        q5: "c",
+        q6: "a",
+        q7: "b",
+        q8: "a",
+        q9: "c",
+        q10: "c",
+        // Tambahkan jawaban benar untuk sisa pertanyaan
+      };
+
+      function checkAnswers() {
+        const form = document.getElementById("quiz-form");
+        const resultDiv = document.getElementById("result");
+        let score = 0;
+        let totalQuestions = Object.keys(correctAnswers).length;
+
+        for (const [question, correctAnswer] of Object.entries(correctAnswers)) {
+          const userAnswer = form.elements[question]?.value;
+          if (userAnswer === correctAnswer) {
+            score++;
+          }
+        }
+
+        resultDiv.style.display = "block";
+        resultDiv.innerHTML = `<h2>Hasil jawaban Anda:</h2><p>Skor: ${score} dari ${totalQuestions}</p><br><p>3-5 benar=Belajar dulu</p><br><p>3-8 benar=lumayan lah</p><br><p>3-10 benar=anda keren dan sangat sigma</p>`;
+      }
+    </script>
+  </body>
+</html>

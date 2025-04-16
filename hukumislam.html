@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jenis-Jenis Hukum Islam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, #1e3c72, #2a5298);
+        color: white;
+        overflow-x: hidden;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      header nav ul {
+        list-style: none;
+        margin-right: 20px;
+        display: flex;
+        gap: 15px;
+
+        padding: 0;
+      }
+
+      header nav ul li a {
+        color: white;
+
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      header nav ul li a:hover {
+        color: #fdbb2d;
+      }
+
+      .hero {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("https://source.unsplash.com/1600x900/?islamic") center/cover;
+      }
+
+      .hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 20px;
+        margin: 15px 0 30px;
+      }
+
+      .hero a {
+        background: #fdbb2d;
+        color: black;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      .hero a:hover {
+        background: #e89c17;
+      }
+
+      section {
+        padding: 60px 20px;
+        text-align: center;
+      }
+
+      .hukum-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .hukum {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s;
+      }
+
+      .hukum:hover {
+        transform: scale(1.05);
+      }
+
+      .hukum h3 {
+        margin: 10px 0;
+        font-size: 24px;
+        color: #fdbb2d;
+      }
+
+      .hukum p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      footer {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Hukum Islam</h1>
+      <nav>
+        <ul>
+          <li><a href="inde.html">Home</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Jenis-Jenis Hukum dalam Islam</h1>
+      <p>Pelajari berbagai jenis hukum dalam Islam yang menjadi pedoman hidup umat Muslim.</p>
+      <a href="#hukum">Eksplorasi Sekarang</a>
+    </section>
+
+    <section id="hukum">
+      <h2>Jenis-Jenis Hukum Islam</h2>
+      <div class="hukum-container">
+        <div class="hukum">
+          <h3>Wajib</h3>
+          <p>Hukum yang harus dilakukan oleh setiap Muslim, jika dilaksanakan mendapatkan pahala, dan jika ditinggalkan mendapat dosa.</p>
+        </div>
+        <div class="hukum">
+          <h3>Sunnah</h3>
+          <p>Hukum yang dianjurkan untuk dilakukan. Jika dilaksanakan mendapat pahala, tetapi jika ditinggalkan tidak berdosa.</p>
+        </div>
+        <div class="hukum">
+          <h3>Haram</h3>
+          <p>Hukum yang dilarang. Jika dilakukan mendapat dosa, dan jika dijauhi mendapat pahala.</p>
+        </div>
+        <div class="hukum">
+          <h3>Makruh</h3>
+          <p>Hukum yang sebaiknya tidak dilakukan. Jika ditinggalkan mendapat pahala, tetapi jika dilakukan tidak berdosa.</p>
+        </div>
+        <div class="hukum">
+          <h3>Mubah</h3>
+          <p>Hukum yang diperbolehkan. Tidak ada pahala maupun dosa saat melakukannya atau meninggalkannya.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tentang">
+      <h2>Tentang Situs Ini</h2>
+      <p>Situs ini bertujuan untuk memberikan informasi edukatif tentang hukum Islam, agar umat Muslim dapat memahami lebih baik pedoman hidup yang diajarkan oleh agama.</p>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak Kami</h2>
+      <p>Jika Anda memiliki pertanyaan atau membutuhkan informasi lebih lanjut, silakan hubungi kami di: <strong>info@hukumislam.com</strong></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Hukum Islam. Semua Hak Dilindungi.</p>
+    </footer>
+  </body>
+</html>
